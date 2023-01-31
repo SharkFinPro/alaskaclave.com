@@ -1,0 +1,25 @@
+{
+  "name": "alaskaclave.com",
+  "version": "1.0.0",
+  "description": "Expediton Fairbanks's Website",
+  "scripts": {
+    "start": "gatsby develop -p 80",
+    "build": "gatsby build",
+    "serve": "gatsby serve -p 80",
+    "clean": "gatsby clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SectionG15/alaskaclave.com.git"
+  },
+  "author": "Section G15",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SectionG15/alaskaclave.com/issues"
+  },
+  "homepage": "https://github.com/SectionG15/alaskaclave.com#readme",
+  "dependencies": {
+    "gatsby": "^5.5.0",
+    "react": "^18.2.0"
+  }
+}
