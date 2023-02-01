@@ -1,11 +1,12 @@
 import React from "react";
-import "../css/wrapper.css";
+import "../css/global.css";
 import * as indexStyle from "../css/index.module.css";
 
 const Page = () => {
     return <div className={indexStyle.comingSoon}>
         <h1>Expedition Fairbanks</h1>
-        <h2><a href={"https://sectiong15.oa-bsa.org/"}>sectionG15.org</a></h2>
+        <h2>August 11-13, 2023</h2>
+        <h4><a href={"https://sectiong15.oa-bsa.org/"}>sectiong15.oa-bsa.org</a></h4>
     </div>
 }
 

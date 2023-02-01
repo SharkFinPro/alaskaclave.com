@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    row-gap: 10%;
+    row-gap: 5%;
 
     width: 100%;
     height: 100%;
@@ -16,9 +16,15 @@
 }
 
 .comingSoon * {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
     margin: 0;
     padding: 0;
 
-    color: inherit;
+    width: 100%;
 
+    color: inherit;
 }
