@@ -34,9 +34,5 @@
 
 html, body, #___gatsby, #gatsby-focus-wrapper {
     margin: 0;
-    width: 100%;
-    height: 100%;
     font-family: MuseoSlab, MuseoSans, Rockwell, Gill Sans, serif;
-    min-font-size: 8px;
-    background: #030006;
 }

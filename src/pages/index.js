@@ -1,29 +1,43 @@
 import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
 import SEO from "../components/seo";
-import Header from "../components/header";
-import Intro from "../components/intro";
-import LostLake from "../components/lostLake";
-import G15 from "../components/g15";
-
+import { StaticImage } from "gatsby-plugin-image";
 import "../css/global.css";
-import * as contentFrameStyle from "../css/contentFrame.module.css";
+import * as indexStyles from "../css/index.module.css";
 
 const Index = () => {
-    const { scrollYProgress } = useScroll();
-    const scrollData = useTransform(scrollYProgress, [0, 1], [0, 5]);
-
-    const y = useTransform(scrollData, [0, 1], ["0%", "-35%"]);
-
     return (
-        <div className={contentFrameStyle.frame}>
-            <Header scrollData={scrollData} />
-            <motion.div className={contentFrameStyle.content} style={{ translateY: y }}>
-                <Intro scrollData={scrollData} />
-                <LostLake />
-                <G15 />
-            </motion.div>
-            {/*<motion.h1 style={{position: "fixed", top: "0", color: "white", background: "blue", height: "100px"}}>{scrollData}</motion.h1>*/}
+        <div className={indexStyles.contentWrapper}>
+            <header>
+                <div className={indexStyles.headerContent}>
+                    <div>
+                        <h1>Expedition Fairbanks</h1>
+                        <p>North to the Future</p>
+                    </div>
+                </div>
+                <StaticImage className={indexStyles.headerBackground} src={"../../static/images/lights.webp"} alt={"Northern Lights"} placeholder={"blurred"} />
+            </header>
+            <section className={indexStyles.intro}>
+                <div className={indexStyles.introContentWrapper}>
+                    <div className={indexStyles.introContent}>
+                        <h2>Section G15's Conclave</h2>
+                        <p>August 11<sup>th</sup> - 13<sup>th</sup>, 2023</p>
+                    </div>
+                </div>
+                <div className={indexStyles.introLogoWrapper}>
+                    <StaticImage className={indexStyles.introLogo} src={"../../static/images/wask.png"} alt={"Section G15 Logo"} placeholder={"blurred"} />
+                </div>
+            </section>
+            <section className={indexStyles.intro}>
+                <div className={indexStyles.introLogoWrapper}>
+                    <div className={indexStyles.introContent}>
+                        <h2>Hosted at Lost Lake Scout Camp</h2>
+                        <p>Fairbanks, Alaska</p>
+                    </div>
+                </div>
+                <div className={indexStyles.introLogoWrapper}>
+                    <StaticImage className={indexStyles.introLogo} src={"../../static/images/logoYellow.png"} alt={"Expedition Fairbanks Logo"} placeholder={"blurred"} />
+                </div>
+            </section>
         </div>
     );
 };

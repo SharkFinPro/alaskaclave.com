@@ -1,30 +1,82 @@
-.comingSoon {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    row-gap: 5%;
+.contentWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
+header {
+    isolation: isolate;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+header > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.headerBackground {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.headerContent {
     width: 100%;
     height: 100%;
-
-    background: #030006;
+    display: grid;
+    place-items: center;
+    background: rgb(0 0 0 / .6);
     color: #FFFFFF;
-
-    font-family: Arial, serif;
     font-size: 4vw;
 }
 
-.comingSoon * {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
+.intro {
+    display: grid;
+    grid-template-rows: 1.25fr 0.75fr;
+    background: #000000;
+}
 
-    margin: 0;
-    padding: 0;
+.introContentWrapper {
+    display: grid;
+    place-items: center;
+}
 
+.introContent {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 3vw;
+}
+
+.introLogoWrapper {
     width: 100%;
+    display: grid;
+    place-items: center;
+    padding-bottom: 1rem;
+}
 
-    color: inherit;
+.introLogo {
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+@media (max-width: 750px) {
+    .headerContent {
+        font-size: 8vw;
+    }
+
+    .headerBackground {
+        aspect-ratio: 1 / 1.25;
+    }
+
+    .contentWrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .introContent {
+        font-size: 6vw;
+    }
 }

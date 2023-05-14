@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Expediton Fairbanks's Website",
   "scripts": {
-    "start": "gatsby develop -p 80",
+    "start": "gatsby develop -p 80 -H 0.0.0.0",
     "build": "gatsby build",
-    "serve": "gatsby serve -p 80",
+    "serve": "gatsby serve -p 80 -H 0.0.0.0",
     "clean": "gatsby clean"
   },
   "repository": {
@@ -19,14 +19,13 @@
   },
   "homepage": "https://github.com/SectionG15/alaskaclave.com#readme",
   "dependencies": {
-    "framer-motion": "^9.0.1",
-    "gatsby": "^5.5.0",
-    "gatsby-plugin-image": "^3.5.0",
-    "gatsby-plugin-manifest": "^5.5.0",
-    "gatsby-plugin-sharp": "^5.5.0",
-    "gatsby-plugin-sitemap": "^6.7.0",
-    "gatsby-source-filesystem": "^5.5.0",
-    "gatsby-transformer-sharp": "^5.5.0",
+    "gatsby": "^5.9.1",
+    "gatsby-plugin-image": "^3.9.0",
+    "gatsby-plugin-manifest": "^5.9.0",
+    "gatsby-plugin-sharp": "^5.9.0",
+    "gatsby-plugin-sitemap": "^6.9.0",
+    "gatsby-source-filesystem": "^5.9.0",
+    "gatsby-transformer-sharp": "^5.9.0",
     "react": "^18.2.0"
   }
 }
