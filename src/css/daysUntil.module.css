@@ -1,0 +1,72 @@
+.daysUntil {
+    background: #0B4662;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    grid-column: 1 / -1;
+}
+
+.daysCounter {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
+    padding-inline: 10%;
+    padding-top: 5%;
+    box-sizing: border-box;
+}
+
+.daysCounter * {
+    aspect-ratio: 1 / 1.25;
+    font-size: 12vw;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: #ffb709;
+    border-radius: 5%;
+}
+
+.daysUntil > h1 {
+    font-size: 4vw;
+    color: #FFFFFF;
+    margin: 0;
+    padding-block: 2.5%;
+}
+
+.registerButton {
+    font-size: 3.5vw;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding-block: 1.5%;
+    margin-bottom: 5%;
+    padding-inline: 4%;
+    border: 5px solid black;
+    border-radius: 1vw;
+    background: #FFFFFF;
+    color: #000000;
+}
+
+.registerButton:hover {
+    background: #dcdcdc;
+}
+
+@media (max-width: 1000px) {
+    .daysCounter {
+        padding-inline: 1%;
+        width: 70%;
+    }
+
+    .daysCounter * {
+        font-size: 22vw;
+    }
+
+    .daysUntil > h1 {
+        font-size: 8vw;
+    }
+
+    .registerButton {
+        font-size: 7vw;
+        padding-inline: 6%;
+        padding-block: 3%;
+    }
+}

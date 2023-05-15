@@ -1,6 +1,7 @@
 import React from "react";
 import SEO from "../components/seo";
 import { StaticImage } from "gatsby-plugin-image";
+import DaysUntil from "../components/daysUntil";
 import "../css/global.css";
 import * as indexStyles from "../css/index.module.css";
 
@@ -38,6 +39,7 @@ const Index = () => {
                     <StaticImage className={indexStyles.introLogo} src={"../../static/images/logoYellow.png"} alt={"Expedition Fairbanks Logo"} placeholder={"blurred"} />
                 </div>
             </section>
+            <DaysUntil />
         </div>
     );
 };

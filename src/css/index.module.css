@@ -63,7 +63,7 @@ header > * {
     object-fit: cover;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
     .headerContent {
         font-size: 8vw;
     }
