@@ -50,7 +50,7 @@
     background: #dcdcdc;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
     .daysCounter {
         padding-inline: 1%;
         width: 70%;
