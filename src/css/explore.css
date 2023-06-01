@@ -38,6 +38,8 @@
 .btn {
     display: inline-block;
     font-size: 1.2rem;
+    color: inherit;
+    text-decoration: none;
     padding: 1em 2em;
     margin-inline: auto;
     font-family: "Museo Slab 500", serif;
