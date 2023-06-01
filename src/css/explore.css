@@ -1,0 +1,51 @@
+.explore {
+    grid-column: 1 / -1;
+    background: #D6CEBD;
+}
+
+.container {
+    width: 80%;
+    max-width: 2000px;
+    margin: 5rem auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.card {
+    width: max(250px, 20%);
+    display: grid;
+    border: none;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    background: #030006;
+    color: #FFFFFF;
+}
+
+.card * {
+    margin: 0.5em;
+}
+
+.card h1 {
+    font-family: "Museo Slab 500", serif;
+    font-size: 1.5rem;
+}
+
+.card p {
+    font-family: "Museo Sans 500", sans-serif;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 1em 2em;
+    margin-inline: auto;
+    font-family: "Museo Slab 500", serif;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    background: #650812;
+}
+
+.btn:hover {
+    background: #E31837;
+}

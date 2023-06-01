@@ -4,6 +4,8 @@ import { StaticImage } from "gatsby-plugin-image";
 import DaysUntil from "../components/daysUntil";
 import "../css/global.css";
 import * as indexStyles from "../css/index.module.css";
+import Explore from "../components/explore";
+import Footer from "../components/footer";
 
 const Index = () => {
     return (
@@ -40,6 +42,8 @@ const Index = () => {
                 </div>
             </section>
             <DaysUntil />
+            <Explore />
+            <Footer />
         </div>
     );
 };

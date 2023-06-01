@@ -63,6 +63,21 @@ header > * {
     object-fit: cover;
 }
 
+.explore {
+    grid-column: 1 / -1;
+    background: darksalmon;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    padding-block: 20px;
+}
+
+.exploreCard {
+    width: 300px;
+    height: 400px;
+    background: dodgerblue;
+}
+
 @media (max-width: 800px) {
     .headerContent {
         font-size: 8vw;

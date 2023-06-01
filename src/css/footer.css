@@ -1,0 +1,9 @@
+footer {
+    background: #030006;
+    color: #FFFFFF;
+    grid-column: 1/-1;
+}
+
+.footer-content {
+    font-size: 1.5em;
+}
