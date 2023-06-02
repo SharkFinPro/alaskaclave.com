@@ -16,9 +16,9 @@ export default function Explore() {
                     <a className={exploreStyle.btn} href={"/logistics"}>Learn More</a>
                 </div>
                 <div className={exploreStyle.card}>
-                    <h1>aaa</h1>
+                    <h1>Promotion</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto aut, delectus deserunt error ex exercitationem explicabo nesciunt reprehenderit suscipit. Corporis culpa doloremque dolorum ducimus eos esse optio perspiciatis ut.</p>
-                    <a className={exploreStyle.btn}>Learn More</a>
+                    <a className={exploreStyle.btn} href={"/promotion"}>Learn More</a>
                 </div>
                 <div className={exploreStyle.card}>
                     <h1>aaa</h1>
