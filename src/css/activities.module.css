@@ -73,3 +73,14 @@
 .activityTagMuseum {
     background-color: #E31837;
 }
+
+.activityContent {
+    /*display: grid;*/
+    /*grid-template-columns: 1fr 1fr;*/
+    /*gap: 1em;*/
+    padding-inline: 1em;
+}
+
+.activityContent img {
+    border-radius: 1rem;
+}

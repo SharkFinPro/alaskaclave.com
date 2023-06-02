@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../components/footer";
 import * as activitiesStyles from "../css/activities.module.css";
 import SEO from "../components/seo";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function Activities() {
     return <div className={activitiesStyles.wrapper}>
@@ -61,7 +62,11 @@ export default function Activities() {
                                 <p className={activitiesStyles.activityTagGuidedTour}>Guided Tour</p>
                                 <p className={activitiesStyles.activityTagMuseum}>Museum</p>
                             </div>
-                            <p>Auto Museum</p>
+                            <div className={activitiesStyles.activityContent}>
+                                {/*<p>Auto Museum</p>*/}
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut beatae facere ipsum non officia optio rem? Autem culpa delectus deserunt esse laudantium magni quis quo, soluta tempore ullam voluptatem.</p>
+                                <StaticImage src={"../../static/images/auto_museum.jpeg"} alt={"Fountainhead Antique Auto Museum Car"} placeholder={"blurred"} />
+                            </div>
                         </div>
                         <div className={activitiesStyles.activity}>
                             <h2>Pioneer Park</h2>
