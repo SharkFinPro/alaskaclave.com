@@ -46,7 +46,11 @@ export default function Activities() {
                                 <p className={activitiesStyles.activityTagGuidedTour}>Guided Tour</p>
                                 <p className={activitiesStyles.activityTagMuseum}>Museum</p>
                             </div>
-                            <p>Wide range of Exhibits & Theater</p>
+                            <div className={activitiesStyles.activityContent}>
+                                {/*<p>Wide range of Exhibits & Theater</p>*/}
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut beatae facere ipsum non officia optio rem? Autem culpa delectus deserunt esse laudantium magni quis quo, soluta tempore ullam voluptatem.</p>
+                                <StaticImage src={"../../static/images/museum_of_the_north.webp"} alt={"Fountainhead Antique Auto Museum Car"} placeholder={"blurred"} />
+                            </div>
                         </div>
                         <div className={activitiesStyles.activity}>
                             <h2>Pioneer Air Museum</h2>
@@ -54,7 +58,11 @@ export default function Activities() {
                                 <p className={activitiesStyles.activityTagGuidedTour}>Guided Tour</p>
                                 <p className={activitiesStyles.activityTagMuseum}>Museum</p>
                             </div>
-                            <p>Air Museum, Guided Tour</p>
+                            <div className={activitiesStyles.activityContent}>
+                                {/*<p>Air Museum, Guided Tour</p>*/}
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut beatae facere ipsum non officia optio rem? Autem culpa delectus deserunt esse laudantium magni quis quo, soluta tempore ullam voluptatem.</p>
+                                <StaticImage src={"../../static/images/pioneer_air_museum.jpg"} alt={"Fountainhead Antique Auto Museum Car"} placeholder={"blurred"} />
+                            </div>
                         </div>
                         <div className={activitiesStyles.activity}>
                             <h2>Fountainhead Antique Auto Museum</h2>
