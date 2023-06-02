@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../components/footer";
 import * as activitiesStyles from "../css/activities.module.css";
+import SEO from "../components/seo";
 
 export default function Activities() {
     return <div className={activitiesStyles.wrapper}>
@@ -108,3 +109,7 @@ export default function Activities() {
         <Footer />
     </div>
 }
+
+export const Head = () => (
+    <SEO title={"Activities"} />
+);

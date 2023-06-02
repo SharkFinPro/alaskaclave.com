@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "../components/seo";
 
 export default function Promotion() {
     return (
@@ -7,3 +8,7 @@ export default function Promotion() {
         </div>
     );
 }
+
+export const Head = () => (
+    <SEO title={"Promotion"} />
+);
