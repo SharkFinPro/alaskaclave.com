@@ -35,6 +35,11 @@
     padding: 1em;
     background: #dcdcdc;
     border-radius: 1.5rem;
+    transition: 0.5s;
+}
+
+.activitySet > *:hover {
+    margin-left: 1rem;
 }
 
 .activitySet * {
