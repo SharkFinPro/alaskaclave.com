@@ -13,11 +13,12 @@
 }
 
 .card {
-    width: max(250px, 20%);
+    width: max(300px, 30%);
     display: grid;
     border: none;
     border-radius: 1rem;
     margin: 0.5rem;
+    padding: 1em;
     background: #030006;
     color: #FFFFFF;
 }

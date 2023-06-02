@@ -18,8 +18,8 @@
 }
 
 .headerContent {
-    padding: 3em;
-    font-size: 1.5rem;
+    padding: 1em 2em;
+    font-size: min(max(2vw, 1.3rem), 2rem);
 }
 
 .activitySetTitle {
@@ -39,7 +39,8 @@
 }
 
 .activitySet > *:hover {
-    margin-left: 1rem;
+    margin-left: 1em;
+    padding-right: 0;
 }
 
 .activitySet * {
