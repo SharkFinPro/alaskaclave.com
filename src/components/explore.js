@@ -20,11 +20,6 @@ export default function Explore() {
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto aut, delectus deserunt error ex exercitationem explicabo nesciunt reprehenderit suscipit. Corporis culpa doloremque dolorum ducimus eos esse optio perspiciatis ut.</p>
                     <a className={exploreStyle.btn} href={"/promotion"}>Learn More</a>
                 </div>
-                <div className={exploreStyle.card}>
-                    <h1>aaa</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto aut, delectus deserunt error ex exercitationem explicabo nesciunt reprehenderit suscipit. Corporis culpa doloremque dolorum ducimus eos esse optio perspiciatis ut.</p>
-                    <a className={exploreStyle.btn}>Learn More</a>
-                </div>
             </section>
         </section>
     );
