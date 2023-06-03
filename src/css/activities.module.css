@@ -48,7 +48,7 @@
 }
 
 .activity h2 {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-bottom: 0;
 }
 
@@ -75,12 +75,24 @@
 }
 
 .activityContent {
-    /*display: grid;*/
-    /*grid-template-columns: 1fr 1fr;*/
-    /*gap: 1em;*/
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 1em;
     padding-inline: 1em;
 }
 
-.activityContent img {
+.activityImage {
     border-radius: 1rem;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+@media (max-width: 800px) {
+    .activity h2 {
+        font-size: 1.6rem;
+    }
+
+    .activityContent {
+        grid-template-columns: 1fr;
+    }
 }
