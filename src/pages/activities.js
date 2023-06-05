@@ -47,7 +47,7 @@ export default function Activities() {
                 <h1 className={activitiesStyles.activitySetTitle}>Fairbanks Excursions</h1>
                 <div className={activitiesStyles.activitySet}>
                     <div className={activitiesStyles.activity}>
-                        <h2>Museum of the North</h2>
+                        <h2><a target={"__blank"} href={"https://www.uaf.edu/museum/"}>Museum of the North<span>🔗</span></a></h2>
                         <div className={activitiesStyles.activityTags}>
                             <p className={activitiesStyles.activityTagGuidedTour}>Guided Tour</p>
                             <p className={activitiesStyles.activityTagMuseum}>Museum</p>
@@ -59,7 +59,7 @@ export default function Activities() {
                         </div>
                     </div>
                     <div className={activitiesStyles.activity}>
-                        <h2>Pioneer Air Museum</h2>
+                        <h2><a target={"__blank"} href={"https://www.pioneerair.museum/"}>Pioneer Air Museum<span>🔗</span></a></h2>
                         <div className={activitiesStyles.activityTags}>
                             <p className={activitiesStyles.activityTagGuidedTour}>Guided Tour</p>
                             <p className={activitiesStyles.activityTagMuseum}>Museum</p>
@@ -71,7 +71,7 @@ export default function Activities() {
                         </div>
                     </div>
                     <div className={activitiesStyles.activity}>
-                        <h2>Fountainhead Antique Auto Museum</h2>
+                        <h2><a target={"__blank"} href={"https://www.fountainheadmuseum.com/"}>Fountainhead Antique Auto Museum<span>🔗</span></a></h2>
                         <div className={activitiesStyles.activityTags}>
                             <p className={activitiesStyles.activityTagGuidedTour}>Guided Tour</p>
                             <p className={activitiesStyles.activityTagMuseum}>Museum</p>
@@ -83,7 +83,7 @@ export default function Activities() {
                         </div>
                     </div>
                     <div className={activitiesStyles.activity}>
-                        <h2>Pioneer Park</h2>
+                        <h2><a target={"__blank"} href={"https://www.fnsb.gov/462/Pioneer-Park"}>Pioneer Park<span>🔗</span></a></h2>
                         <div className={activitiesStyles.activityContent}>
                             {/*<p>Historical Theme Park, Free Roam</p>*/}
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut beatae facere ipsum non officia optio rem? Autem culpa delectus deserunt esse laudantium magni quis quo, soluta tempore ullam voluptatem.</p>
@@ -91,7 +91,7 @@ export default function Activities() {
                         </div>
                     </div>
                     <div className={activitiesStyles.activity}>
-                        <h2>Pioneer Museum</h2>
+                        <h2><a target={"__blank"} href={"https://pioneersofalaskafairbanks.org/pioneer-museum"}>Pioneer Museum<span>🔗</span></a></h2>
                         <div className={activitiesStyles.activityTags}>
                             <p className={activitiesStyles.activityTagGuidedTour}>Guided Tour</p>
                             <p className={activitiesStyles.activityTagMuseum}>Museum</p>
@@ -103,7 +103,7 @@ export default function Activities() {
                         </div>
                     </div>
                     <div className={activitiesStyles.activity}>
-                        <h2>Morris Thompson Cultural Center</h2>
+                        <h2><a target={"__blank"} href={"https://www.morristhompsoncenter.org/"}>Morris Thompson Cultural Center<span>🔗</span></a></h2>
                         <div className={activitiesStyles.activityTags}>
                             <p className={activitiesStyles.activityTagGuidedTour}>Guided Tour</p>
                             <p className={activitiesStyles.activityTagMuseum}>Museum</p>
@@ -115,7 +115,7 @@ export default function Activities() {
                         </div>
                     </div>
                     <div className={activitiesStyles.activity}>
-                        <h2>Large Animal Research Station</h2>
+                        <h2><a target={"__blank"} href={"https://www.uaf.edu/lars/"}>Large Animal Research Station<span>🔗</span></a></h2>
                         <div className={activitiesStyles.activityContent}>
                             {/*<p>Research Station for Native Species</p>*/}
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut beatae facere ipsum non officia optio rem? Autem culpa delectus deserunt esse laudantium magni quis quo, soluta tempore ullam voluptatem.</p>
@@ -123,7 +123,7 @@ export default function Activities() {
                         </div>
                     </div>
                     <div className={activitiesStyles.activity}>
-                        <h2>Alaska Songbird Institute</h2>
+                        <h2><a target={"__blank"} href={"https://aksongbird.org/"}>Alaska Songbird Institute<span>🔗</span></a></h2>
                         <div className={activitiesStyles.activityContent}>
                             {/*<p>Research Center, Guided Activity</p>*/}
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut beatae facere ipsum non officia optio rem? Autem culpa delectus deserunt esse laudantium magni quis quo, soluta tempore ullam voluptatem.</p>
