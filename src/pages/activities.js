@@ -21,19 +21,27 @@ export default function Activities() {
                     <div className={activitiesStyles.activitySet}>
                         <div className={activitiesStyles.activity}>
                             <h2>Hikes</h2>
-                            <p>2-3 Miles, Connecting Trails</p>
+                            <div className={activitiesStyles.activityContent}>
+                                <p>2-3 Miles, Connecting Trails</p>
+                            </div>
                         </div>
                         <div className={activitiesStyles.activity}>
                             <h2>Shooting Sports</h2>
-                            <p>Archery, Rifle, Shotgun</p>
+                            <div className={activitiesStyles.activityContent}>
+                                <p>Archery, Rifle, Shotgun</p>
+                            </div>
                         </div>
                         <div className={activitiesStyles.activity}>
                             <h2>Waterfront</h2>
-                            <p>Fishing</p>
+                            <div className={activitiesStyles.activityContent}>
+                                <p>Fishing</p>
+                            </div>
                         </div>
                         <div className={activitiesStyles.activity}>
                             <h2>COPE & Zipline</h2>
-                            <p>COPE Course with a Zipline!</p>
+                            <div className={activitiesStyles.activityContent}>
+                                <p>COPE Course with a Zipline!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
