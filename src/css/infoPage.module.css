@@ -1,0 +1,23 @@
+.wrapper {
+    display: grid;
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+.header {
+    background: #650812;
+    color: #FFFFFF;
+}
+
+.main {
+    background: #D6CEBD;
+}
+
+.headerContent {
+    padding: 1em 2em;
+    font-size: min(max(2vw, 1.3rem), 2rem);
+}
