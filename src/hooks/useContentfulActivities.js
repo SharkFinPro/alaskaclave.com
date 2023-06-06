@@ -6,7 +6,8 @@ const useSiteMetadata = () => {
         allContentfulConclaveActivity {
             edges {
                 node {
-                    id,
+                    id
+                    inCamp
                     name
                     url
                     tags

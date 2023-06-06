@@ -11,8 +11,41 @@ const activityTags = {
     "Museum": activitiesStyles.activityTagMuseum
 };
 
+function displayActivitySet(title, activities) {
+    return <>
+        <h1 className={activitiesStyles.activitySetTitle}>{title}</h1>
+        <div className={activitiesStyles.activitySet}>
+            {activities.map((activity) => (
+                <div className={activitiesStyles.activity} key={activity.id}>
+                    {
+                        activity.url ? <h2><a target={"__blank"} href={activity.url}>{activity.name} <span>🔗</span></a></h2>
+                            : <h2>{activity.name}</h2>
+                    }
+                    <div className={activitiesStyles.activityTags}>
+                        {activity.tags?.map((tag) => <p className={activityTags[tag]}>{tag}</p>)}
+                    </div>
+                    <div className={activitiesStyles.activityContent}>
+                        <p>{activity.description?.description}</p>
+                        <GatsbyImage className={activitiesStyles.activityImage} image={activity.image?.gatsbyImageData} alt={activity.name} placeholder={"blurred"} />
+                    </div>
+                </div>
+            ))}
+        </div>
+    </>
+}
+
 export default function Activities() {
     const activities = useContentfulActivities();
+    const inCampActivities = [];
+    const fairbanksActivities = [];
+
+    for (const { node } of activities) {
+        if (node.inCamp) {
+            inCampActivities.push(node);
+        } else {
+            fairbanksActivities.push(node);
+        }
+    }
 
     return <div className={infoPageStyles.wrapper}>
         <div className={infoPageStyles.header}>
@@ -25,50 +58,8 @@ export default function Activities() {
         </div>
         <div className={infoPageStyles.main}>
             <div className={infoPageStyles.container}>
-                <h1 className={activitiesStyles.activitySetTitle}>In-Camp Festivities</h1>
-                <div className={activitiesStyles.activitySet}>
-                    <div className={activitiesStyles.activity}>
-                        <h2>Hikes</h2>
-                        <div className={activitiesStyles.activityContent}>
-                            <p>2-3 Miles, Connecting Trails</p>
-                        </div>
-                    </div>
-                    <div className={activitiesStyles.activity}>
-                        <h2>Shooting Sports</h2>
-                        <div className={activitiesStyles.activityContent}>
-                            <p>Archery, Rifle, Shotgun</p>
-                        </div>
-                    </div>
-                    <div className={activitiesStyles.activity}>
-                        <h2>Waterfront</h2>
-                        <div className={activitiesStyles.activityContent}>
-                            <p>Fishing</p>
-                        </div>
-                    </div>
-                    <div className={activitiesStyles.activity}>
-                        <h2>COPE & Zipline</h2>
-                        <div className={activitiesStyles.activityContent}>
-                            <p>COPE Course with a Zipline!</p>
-                        </div>
-                    </div>
-                </div>
-                <h1 className={activitiesStyles.activitySetTitle}>Fairbanks Excursions</h1>
-                <div className={activitiesStyles.activitySet}>
-                    {activities.map(({ node }) => (
-                        <div className={activitiesStyles.activity} key={node.id}>
-                            <h2><a target={"__blank"} href={node.url}>{node.name} <span>🔗</span></a></h2>
-                            <div className={activitiesStyles.activityTags}>
-                                {node.tags?.map((tag) => (
-                                    <p className={activityTags[tag]}>{tag}</p>
-                                ))}
-                            </div>
-                            <div className={activitiesStyles.activityContent}>
-                                <p>{node.description?.description}</p>
-                                <GatsbyImage className={activitiesStyles.activityImage} image={node.image.gatsbyImageData} alt={node.name} placeholder={"blurred"} />
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                {displayActivitySet("In-Camp Festivities", inCampActivities)}
+                {displayActivitySet("Fairbanks Excursions", fairbanksActivities)}
             </div>
         </div>
         <Footer />
