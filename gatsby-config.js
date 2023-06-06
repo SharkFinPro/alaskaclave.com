@@ -1,3 +1,7 @@
+require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
     siteMetadata: {
         title: `Expedition Fairbanks`,
@@ -18,6 +22,13 @@ module.exports = {
                 display: `standalone`,
                 icon: `static/images/logoYellow.png`
             },
+        },
+        {
+            resolve: `gatsby-source-contentful`,
+            options: {
+                spaceId: `xgpifmnsfwpn`,
+                accessToken: process.env.CONTENTFUL_TOKEN
+            }
         },
         `gatsby-plugin-image`,
         `gatsby-plugin-sharp`,

@@ -35,6 +35,8 @@
 
 .activity h2 a span {
     font-size: 0.75em;
+    color: transparent;
+    text-shadow: 0 0 0 #650812;
 }
 
 .activityTags {
@@ -66,6 +68,11 @@
     padding-inline: 1em;
 }
 
+.activityContent p {
+    font-size: 1.15rem;
+    line-height: 1.5em;
+}
+
 .activityImage {
     border-radius: 1rem;
     aspect-ratio: 16/9;
@@ -79,5 +86,10 @@
 
     .activityContent {
         grid-template-columns: 1fr;
+    }
+
+    .activityContent p {
+        font-size: 1rem;
+        line-height: 1em;
     }
 }
