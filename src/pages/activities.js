@@ -1,10 +1,9 @@
 import React from "react";
-import Footer from "../components/footer";
 import SEO from "../components/seo";
 import { GatsbyImage } from "gatsby-plugin-image";
-import * as infoPageStyles from "../css/infoPage.module.css";
 import * as activitiesStyles from "../css/activities.module.css";
 import useContentfulActivities from "../hooks/useContentfulActivities";
+import InfoPage from "../components/infoPage";
 
 const activityTags = {
     "Guided Tour": activitiesStyles.activityTagGuidedTour,
@@ -47,23 +46,12 @@ export default function Activities() {
         }
     }
 
-    return <div className={infoPageStyles.wrapper}>
-        <div className={infoPageStyles.header}>
-            <div className={infoPageStyles.container}>
-                <div className={infoPageStyles.headerContent}>
-                    <h1>Activities</h1>
-                    <p>Customize your experience</p>
-                </div>
-            </div>
-        </div>
-        <div className={infoPageStyles.main}>
-            <div className={infoPageStyles.container}>
-                {displayActivitySet("In-Camp Festivities", inCampActivities)}
-                {displayActivitySet("Fairbanks Excursions", fairbanksActivities)}
-            </div>
-        </div>
-        <Footer />
-    </div>
+    return (
+        <InfoPage title={"Activities"} description={"Customize your experience"}>
+            {displayActivitySet("In-Camp Festivities", inCampActivities)}
+            {displayActivitySet("Fairbanks Excursions", fairbanksActivities)}
+        </InfoPage>
+    );
 }
 
 export const Head = () => (
