@@ -32,6 +32,10 @@
     font-display: swap;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html, body, #___gatsby, #gatsby-focus-wrapper {
     margin: 0;
     font-family: MuseoSlab, MuseoSans, Rockwell, Gill Sans, serif;
