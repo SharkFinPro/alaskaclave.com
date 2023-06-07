@@ -1,9 +1,9 @@
 import React from "react";
 import SEO from "../components/seo";
 import { GatsbyImage } from "gatsby-plugin-image";
-import * as activitiesStyles from "../css/activities.module.css";
 import useContentfulActivities from "../hooks/useContentfulActivities";
 import InfoPage from "../components/infoPage";
+import * as activitiesStyles from "../css/activities.module.css";
 
 const activityTags = {
     "Guided Tour": activitiesStyles.activityTagGuidedTour,
