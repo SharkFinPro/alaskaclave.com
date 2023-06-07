@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-const useSiteMetadata = () => {
+const useContentfulActivities = () => {
     const data = useStaticQuery(graphql`
     query {
         allContentfulConclaveActivity {
@@ -26,4 +26,4 @@ const useSiteMetadata = () => {
     return data.allContentfulConclaveActivity.edges;
 };
 
-export default useSiteMetadata;
+export default useContentfulActivities;
