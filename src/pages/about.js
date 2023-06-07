@@ -10,8 +10,10 @@ export default function Activities() {
 
     return (
         <InfoPage title={"About"} description={"The weekend"}>
-            <h1>What is Conclave?</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium earum incidunt molestiae nam odio, optio pariatur quaerat. Alias beatae culpa eos ipsum quod quos vero. Debitis ea magnam magni rem.</p>
+            <div className={aboutStyles.about}>
+                <h1>What is Conclave?</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium earum incidunt molestiae nam odio, optio pariatur quaerat. Alias beatae culpa eos ipsum quod quos vero. Debitis ea magnam magni rem.</p>
+            </div>
             <h1 className={aboutStyles.structureTitle}>Structure</h1>
             <div className={aboutStyles.structure}>
                 {structureEntries.map(({ node }) => (
