@@ -48,6 +48,10 @@ export default function Activities() {
 
     return (
         <InfoPage title={"Activities"} description={"Customize your experience"}>
+            <div className={activitiesStyles.structure}>
+                <h1>Structure</h1>
+                <p>During the day on Saturday, participants will be placed in crews that go around either the camp or fairbanks doing a selection of activities together.</p>
+            </div>
             {displayActivitySet("In-Camp Festivities", inCampActivities)}
             {displayActivitySet("Fairbanks Excursions", fairbanksActivities)}
         </InfoPage>
