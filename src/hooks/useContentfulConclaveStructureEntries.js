@@ -7,7 +7,6 @@ const useContentfulConclaveStructureEntries = () => {
             edges {
                 node {
                     id
-                    chronologicalOrder
                     name
                     description {
                         description

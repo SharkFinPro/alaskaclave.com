@@ -11,7 +11,7 @@ const activityTags = {
 };
 
 function displayActivitySet(title, activities) {
-    return <>
+    return <div key={title}>
         <h1 className={activitiesStyles.activitySetTitle}>{title}</h1>
         <div className={activitiesStyles.activitySet}>
             {activities.map((activity) => (
@@ -21,7 +21,7 @@ function displayActivitySet(title, activities) {
                             : <h2>{activity.name}</h2>
                     }
                     <div className={activitiesStyles.activityTags}>
-                        {activity.tags?.map((tag) => <p className={activityTags[tag]}>{tag}</p>)}
+                        {activity.tags?.map((tag) => <p className={activityTags[tag]} key={tag}>{tag}</p>)}
                     </div>
                     <div className={activitiesStyles.activityContent}>
                         <p>{activity.description?.description}</p>
@@ -30,7 +30,7 @@ function displayActivitySet(title, activities) {
                 </div>
             ))}
         </div>
-    </>
+    </div>
 }
 
 export default function Activities() {
@@ -48,10 +48,6 @@ export default function Activities() {
 
     return (
         <InfoPage title={"Activities"} description={"Customize your experience"}>
-            <div className={activitiesStyles.structure}>
-                <h1>Structure</h1>
-                <p>During the day on Saturday, participants will be placed in crews that go around either the camp or fairbanks doing a selection of activities together.</p>
-            </div>
             {displayActivitySet("In-Camp Festivities", inCampActivities)}
             {displayActivitySet("Fairbanks Excursions", fairbanksActivities)}
         </InfoPage>

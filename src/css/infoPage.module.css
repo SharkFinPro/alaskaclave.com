@@ -22,3 +22,39 @@
     padding: 1em 2em;
     font-size: min(max(2vw, 1.3rem), 2rem);
 }
+
+.intro {
+    display: grid;
+    place-items: center;
+    background: #dcdcdc;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.intro:hover {
+    border-radius: 1.5rem;
+    padding-block: 1.5rem;
+}
+
+.intro h1 {
+    font-size: 2.75rem;
+    margin-bottom: 0;
+}
+
+.intro p {
+    font-size: 1.15rem;
+    line-height: 1.5em;
+}
+
+@media (max-width: 800px) {
+    .intro h1 {
+        font-size: 2.25rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+        line-height: 1em;
+    }
+}

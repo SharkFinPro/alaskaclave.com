@@ -1,28 +1,3 @@
-.structure {
-    display: grid;
-    place-items: center;
-    background: #dcdcdc;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    transition: 0.5s;
-}
-
-.structure:hover {
-    border-radius: 1.5rem;
-    padding-block: 1.5rem;
-}
-
-.structure h1 {
-    font-size: 2.75rem;
-    margin-bottom: 0;
-}
-
-.structure p {
-    font-size: 1.15rem;
-    line-height: 1.5em;
-}
-
 .activitySetTitle {
     font-size: 2.5rem;
     margin-top: 2rem;
@@ -111,15 +86,6 @@
 }
 
 @media (max-width: 800px) {
-    .structure h1 {
-        font-size: 2.25rem;
-    }
-
-    .structure p {
-        font-size: 1rem;
-        line-height: 1em;
-    }
-
     .activity h2 {
         font-size: 1.6rem;
     }
