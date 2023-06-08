@@ -1,6 +1,6 @@
 import React from "react";
 import * as exploreStyle from "../css/explore.module.css";
-import {graphql, useStaticQuery} from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 
 export default function Explore() {
     const { allContentfulInfoPageData } = useStaticQuery(graphql`
@@ -19,7 +19,6 @@ export default function Explore() {
     }`);
 
     const pageDescriptions = allContentfulInfoPageData.edges;
-
 
     return (
         <section className={exploreStyle.explore}>
