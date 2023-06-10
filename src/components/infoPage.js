@@ -38,8 +38,8 @@ export default function InfoPage({ title, description, children }) {
         <div className={infoPageStyles.main}>
             <div className={infoPageStyles.container}>
                 <div className={infoPageStyles.intro}>
-                    <h1>{pageData.node.introTitle}</h1>
-                    <p>{pageData.node.introContent?.introContent}</p>
+                    <h1>{pageData?.node.introTitle}</h1>
+                    <p>{pageData?.node.introContent?.introContent}</p>
                 </div>
                 {children}
             </div>

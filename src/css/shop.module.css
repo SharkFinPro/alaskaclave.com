@@ -1,0 +1,59 @@
+.productsViewer {
+    display: grid;
+}
+
+.productsViewer > h1 {
+    text-align: center;
+    font-family: "Museo Slab 500", serif;
+    font-size: 3rem;
+}
+
+.productsDisplay {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.productCard {
+    width: 45%;
+    max-width: 250px;
+    display: grid;
+    aspect-ratio: 1/1.5;
+    border: 5px solid #030006;
+    border-radius: 1rem;
+    padding: 0.5em;
+    background: #dcdcdc;
+}
+
+.productCard > * {
+    margin: 0;
+    padding: 0;
+}
+
+.productCardName {
+    align-self: flex-start;
+    justify-self: center;
+    text-align: center;
+    font-family: "Museo Slab 500", serif;
+    font-size: 1.5rem;
+}
+
+.productCardDescription {
+    font-family: "Museo Sans 500", sans-serif;
+    font-size: 1rem;
+}
+
+.productCardPrice {
+    align-self: flex-start;
+    justify-self: flex-start;
+    font-size: 1.25rem;
+    font-family: "Museo Slab 500", serif;
+}
+
+.productCardImage {
+    aspect-ratio: 16/9;
+    width: 100%;
+    align-self: flex-start;
+    border-radius: 1rem;
+}
