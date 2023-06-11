@@ -3,7 +3,7 @@ import SEO from "../components/seo";
 import InfoPage from "../components/infoPage";
 import * as shopStyles from "../css/shop.module.css";
 import { graphql, useStaticQuery } from "gatsby";
-import {GatsbyImage} from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export default function Shop() {
     const { allContentfulTradingPostProduct } = useStaticQuery(graphql`
@@ -34,9 +34,11 @@ export default function Shop() {
                     {products.map(({ node }) => (
                         <div className={shopStyles.productCard} key={node.name}>
                             <GatsbyImage className={shopStyles.productCardImage} image={node.image?.gatsbyImageData} alt={node.name} />
-                            <p className={shopStyles.productCardPrice}>${node.price}</p>
-                            <h1 className={shopStyles.productCardName}>{node.name}</h1>
-                            <p className={shopStyles.productCardDescription}>{node.description?.description}</p>
+                            <div className={shopStyles.productCardText}>
+                                <h1 className={shopStyles.productCardName}>{node.name}</h1>
+                                <p className={shopStyles.productCardDescription}>{node.description?.description}</p>
+                                <p className={shopStyles.productCardPrice}>${node.price}</p>
+                            </div>
                         </div>
                     ))}
                 </div>
