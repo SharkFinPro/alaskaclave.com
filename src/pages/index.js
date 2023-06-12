@@ -17,7 +17,7 @@ const Index = () => {
                         <p>North to the Future</p>
                     </div>
                 </div>
-                <StaticImage className={indexStyles.headerBackground} src={"../../static/images/lights.webp"} alt={"Northern Lights"} placeholder={"blurred"} />
+                <StaticImage className={indexStyles.headerBackground} src={"../../static/images/lights_1080.webp"} alt={"Northern Lights"} placeholder={"blurred"} />
             </header>
             <section className={indexStyles.intro}>
                 <div className={indexStyles.introContentWrapper}>
@@ -27,7 +27,7 @@ const Index = () => {
                     </div>
                 </div>
                 <div className={indexStyles.introLogoWrapper}>
-                    <StaticImage className={indexStyles.introLogo} src={"../../static/images/wask.png"} alt={"Section G15 Logo"} placeholder={"blurred"} />
+                    <StaticImage className={indexStyles.introLogo} src={"../../static/images/wask_512.png"} alt={"Section G15 Logo"} placeholder={"blurred"} />
                 </div>
             </section>
             <section className={indexStyles.intro}>
@@ -38,7 +38,7 @@ const Index = () => {
                     </div>
                 </div>
                 <div className={indexStyles.introLogoWrapper}>
-                    <StaticImage className={indexStyles.introLogo} src={"../../static/images/logoYellow.png"} alt={"Expedition Fairbanks Logo"} placeholder={"blurred"} />
+                    <StaticImage className={indexStyles.introLogo} src={"../../static/images/logoYellow_512.png"} alt={"Expedition Fairbanks Logo"} placeholder={"blurred"} />
                 </div>
             </section>
             <DaysUntil />
