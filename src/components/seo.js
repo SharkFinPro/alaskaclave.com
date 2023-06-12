@@ -1,12 +1,34 @@
 import React from "react";
 import useSiteMetadata from "../hooks/use-site-metadata";
+import { graphql, useStaticQuery } from "gatsby";
 
 const SEO = ({ title, description, pathname, children }) => {
+    const { allContentfulInfoPageData } = useStaticQuery(graphql`
+    query {
+        allContentfulInfoPageData {
+            edges {
+                node {
+                    id
+                    introTitle
+                    page
+                    homepageOrder
+                    homepageDescription {
+                        homepageDescription
+                    }
+                    introContent {
+                        introContent
+                    }
+                }
+            }
+        }
+    }`);
+    const pageDescription = allContentfulInfoPageData.edges.find(({ node }) => node.page === title)?.node?.introContent?.introContent;
+
     const { title: defaultTitle, description: defaultDescription, image, siteUrl, twitterUsername } = useSiteMetadata();
 
     const seo = {
         title: title ? `${title} | ${defaultTitle}` : defaultTitle,
-        description: description || defaultDescription,
+        description: pageDescription || description || defaultDescription,
         image: `${siteUrl}${image}`,
         url: `${siteUrl}${pathname || ``}`,
         twitterUsername,
