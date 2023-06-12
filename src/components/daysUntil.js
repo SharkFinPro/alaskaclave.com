@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import * as daysUntilStyles from "../css/daysUntil.module.css";
 
 export default function DaysUntil() {
@@ -15,7 +14,7 @@ export default function DaysUntil() {
                 <h1>{~~(daysBetween % 10)}</h1>
             </div>
             <h1>Days until Conclave!</h1>
-            <Link to={"https://registration.oa-bsa.org/Event/1198"} target={"_blank"} className={daysUntilStyles.registerButton}>Register!</Link>
+            <a href={"https://registration.oa-bsa.org/Event/1198"} target={"_blank"} rel={"external"} className={daysUntilStyles.registerButton}>Register!</a>
         </section>
     );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import * as exploreStyle from "../css/explore.module.css";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 
 export default function Explore() {
     const { allContentfulInfoPageData } = useStaticQuery(graphql`
@@ -24,10 +24,10 @@ export default function Explore() {
         <section className={exploreStyle.explore}>
             <section className={exploreStyle.container}>
                 {pageDescriptions.map(({ node }) => (
-                    <div className={exploreStyle.card}>
+                    <div className={exploreStyle.card} key={node.page}>
                         <h1>{node.page}</h1>
                         <p>{node.homepageDescription?.homepageDescription}</p>
-                        <a className={exploreStyle.btn} href={`/${node.page.toLowerCase()}`}>Learn More</a>
+                        <Link className={exploreStyle.btn} to={`/${node.page.toLowerCase()}`}>Learn More</Link>
                     </div>
                 ))}
             </section>
