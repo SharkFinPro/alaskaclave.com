@@ -10,19 +10,19 @@
 
 .productsDisplay {
     justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 1rem;
 }
 
 .productCard {
-    width: 45%;
-    max-width: 250px;
-    aspect-ratio: 1/1.5;
-    border: 5px solid #030006;
+    height: 450px;
     border-radius: 1rem;
     background: #dcdcdc;
     color: #FFFFFF;
+    box-shadow: 0 0 10px #030006;
+    display: flex;
+    flex-direction: column;
 }
 
 .productCardImage {
@@ -34,6 +34,7 @@
 .productCardText {
     background: #0B4662;
     padding-inline: 1rem;
+    width: 100%;
 }
 
 .productCardName {
@@ -50,4 +51,14 @@
 .productCardPrice {
     font-size: 1.25rem;
     font-family: "Museo Slab 500", serif;
+}
+
+@media (max-width: 800px) {
+    .productsDisplay {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .productCard {
+        height: 350px;
+    }
 }
