@@ -20,7 +20,8 @@
 
 .daysCounter * {
   font-size: min(12vw, 15rem);
-  padding: 0.25em;
+  /*padding: 0.25em;*/
+  padding: 0.25em 0.5em;
   margin: 0;
   display: grid;
   place-items: center;
@@ -40,7 +41,7 @@
   font-size: min(3.5vw, 5rem);
   text-decoration: none;
   box-sizing: border-box;
-  padding: 0.25em 1em;
+  padding: 0.5em 1.5em;
   border: 5px solid black;
   border-radius: 1vw;
   background: #FFFFFF;
