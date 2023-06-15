@@ -14,7 +14,7 @@
   width: 90%;
   padding: 1em;
   background: #dcdcdc;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
   transition: 0.5s;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -22,8 +22,8 @@
 }
 
 .structure > *:hover {
-  border-radius: 1.5rem;
-  padding-block: 1.5rem;
+  margin-left: 2em;
+  margin-right: 0;
 }
 
 .structureEntryContent {
