@@ -1,101 +1,101 @@
 .activitySetTitle {
-    font-size: 2.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .activitySet {
-    margin-left: 2rem;
+  margin-left: 2rem;
 }
 
 .activitySet > * {
-    padding: 1em;
-    background: #dcdcdc;
-    border-radius: 1.5rem;
-    transition: 0.5s;
+  padding: 1em;
+  background: #dcdcdc;
+  border-radius: 1.5rem;
+  transition: 0.5s;
 }
 
 .activitySet > *:hover {
-    margin-left: 1em;
-    padding-right: 0;
+  margin-left: 1em;
+  padding-right: 0;
 }
 
 .activitySet * {
-    margin-block: 0.5em;
+  margin-block: 0.5em;
 }
 
 .activity h2 {
-    font-size: 2rem;
-    margin-bottom: 0;
+  font-size: 2rem;
+  margin-bottom: 0;
 }
 
 .activity h2 a {
-    color: inherit;
-    text-decoration: none;
-    transition: 0.25s;
+  color: inherit;
+  text-decoration: none;
+  transition: 0.25s;
 }
 
 .activity h2 a:hover {
-    color: #650812;
+  color: #650812;
 }
 
 .activity h2 a span {
-    font-size: 0.75em;
-    color: transparent;
-    text-shadow: 0 0 0 #650812;
+  font-size: 0.75em;
+  color: transparent;
+  text-shadow: 0 0 0 #650812;
 }
 
 .activityTags {
-    margin-top: 0;
-    margin-left: 1em;
-    gap: 0.5em;
-    display: flex;
+  margin-top: 0;
+  margin-left: 1em;
+  gap: 0.5em;
+  display: flex;
 }
 
 .activityTags p {
-    font-family: "Museo Sans 500", sans serif;
-    font-size: 0.8rem;
-    padding: 0.3em 1em;
-    border-radius: 1rem;
+  font-family: "Museo Sans 500", sans serif;
+  font-size: 0.8rem;
+  padding: 0.3em 1em;
+  border-radius: 1rem;
 }
 
 .activityTagGuidedTour {
-    background-color: #ffb709;
+  background-color: #ffb709;
 }
 
 .activityTagMuseum {
-    background-color: #E31837;
+  background-color: #E31837;
 }
 
 .activityContent {
-    display: grid;
-    grid-template-columns: 1.25fr .75fr;
-    gap: 1em;
-    padding-inline: 1em;
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 1em;
+  padding-inline: 1em;
 }
 
 .activityContent p {
-    font-size: 1.15rem;
-    line-height: 1.5em;
+  font-size: 1.15rem;
+  line-height: 1.5em;
 }
 
 .activityImage {
-    border-radius: 1rem;
-    aspect-ratio: 16/9;
-    object-fit: cover;
+  border-radius: 1rem;
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
 
 @media (max-width: 800px) {
-    .activity h2 {
-        font-size: 1.6rem;
-    }
+  .activity h2 {
+    font-size: 1.6rem;
+  }
 
-    .activityContent {
-        grid-template-columns: 1fr;
-    }
+  .activityContent {
+    grid-template-columns: 1fr;
+  }
 
-    .activityContent p {
-        font-size: 1rem;
-        line-height: 1.25em;
-    }
+  .activityContent p {
+    font-size: 1rem;
+    line-height: 1.25em;
+  }
 }

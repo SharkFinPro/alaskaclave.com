@@ -1,97 +1,97 @@
 .contentWrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 header {
-    isolation: isolate;
-    display: grid;
-    place-items: center;
-    text-align: center;
-    grid-column: 1 / -1;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  grid-column: 1 / -1;
 }
 
 header > * {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 .headerBackground {
-    width: 100%;
-    aspect-ratio: 2 / 1;
-    object-fit: cover;
-    z-index: -1;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .headerContent {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    background: rgb(0 0 0 / .6);
-    color: #FFFFFF;
-    font-size: 4vw;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: rgb(0 0 0 / .6);
+  color: #FFFFFF;
+  font-size: 4vw;
 }
 
 .intro {
-    display: grid;
-    grid-template-rows: 1.25fr 0.75fr;
-    background: #000000;
+  display: grid;
+  grid-template-rows: 1.25fr 0.75fr;
+  background: #000000;
 }
 
 .introContentWrapper {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 .introContent {
-    text-align: center;
-    color: #FFFFFF;
-    font-size: 3vw;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 3vw;
 }
 
 .introLogoWrapper {
-    width: 100%;
-    display: grid;
-    place-items: center;
-    padding-bottom: 1rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding-bottom: 1rem;
 }
 
 .introLogo {
-    width: 40%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+  width: 40%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .explore {
-    grid-column: 1 / -1;
-    background: darksalmon;
-    display: grid;
-    grid-auto-flow: column;
-    place-items: center;
-    padding-block: 20px;
+  grid-column: 1 / -1;
+  background: darksalmon;
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  padding-block: 20px;
 }
 
 .exploreCard {
-    width: 300px;
-    height: 400px;
-    background: dodgerblue;
+  width: 300px;
+  height: 400px;
+  background: dodgerblue;
 }
 
 @media (max-width: 800px) {
-    .headerContent {
-        font-size: 8vw;
-    }
+  .headerContent {
+    font-size: 8vw;
+  }
 
-    .headerBackground {
-        aspect-ratio: 1 / 1.25;
-    }
+  .headerBackground {
+    aspect-ratio: 1 / 1.25;
+  }
 
-    .contentWrapper {
-        grid-template-columns: 1fr;
-    }
+  .contentWrapper {
+    grid-template-columns: 1fr;
+  }
 
-    .introContent {
-        font-size: 6vw;
-    }
+  .introContent {
+    font-size: 6vw;
+  }
 }

@@ -1,55 +1,55 @@
 .explore {
-    grid-column: 1 / -1;
-    background: #D6CEBD;
+  grid-column: 1 / -1;
+  background: #D6CEBD;
 }
 
 .container {
-    width: 80%;
-    max-width: 2000px;
-    margin: 5rem auto;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+  width: 80%;
+  max-width: 2000px;
+  margin: 5rem auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .card {
-    width: max(300px, 30%);
-    display: grid;
-    border: none;
-    border-radius: 1rem;
-    margin: 0.5rem;
-    padding: 1em;
-    background: #030006;
-    color: #FFFFFF;
+  width: max(300px, 30%);
+  display: grid;
+  border: none;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 1em;
+  background: #030006;
+  color: #FFFFFF;
 }
 
 .card * {
-    margin: 0.5em;
+  margin: 0.5em;
 }
 
 .card h1 {
-    font-family: "Museo Slab 500", serif;
-    font-size: 1.5rem;
+  font-family: "Museo Slab 500", serif;
+  font-size: 1.5rem;
 }
 
 .card p {
-    font-family: "Museo Sans 500", sans-serif;
+  font-family: "Museo Sans 500", sans-serif;
 }
 
 .btn {
-    align-self: flex-end;
-    display: inline-block;
-    font-size: 1.2rem;
-    color: inherit;
-    text-decoration: none;
-    padding: 1em 2em;
-    margin-inline: auto;
-    font-family: "Museo Slab 500", serif;
-    border: 2px solid black;
-    border-radius: 0.5rem;
-    background: #650812;
+  align-self: flex-end;
+  display: inline-block;
+  font-size: 1.2rem;
+  color: inherit;
+  text-decoration: none;
+  padding: 1em 2em;
+  margin-inline: auto;
+  font-family: "Museo Slab 500", serif;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  background: #650812;
 }
 
 .btn:hover {
-    background: #E31837;
+  background: #E31837;
 }

@@ -1,29 +1,29 @@
 .wrapper {
-    background: #030006;
-    color: #FFFFFF;
-    grid-column: 1/-1;
+  background: #030006;
+  color: #FFFFFF;
+  grid-column: 1/-1;
 }
 
 .container {
-    width: 90%;
-    margin-inline: auto;
+  width: 90%;
+  margin-inline: auto;
 }
 
 .content {
-    font-size: min(max(1vw, 0.75rem), 1.75rem);
-    text-align: center;
-    padding: 3em 0;
+  font-size: min(max(1vw, 0.75rem), 1.75rem);
+  text-align: center;
+  padding: 3em 0;
 }
 
 .content h1 {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .content p {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 .content p a {
-    color: inherit;
-    text-decoration: underline;
+  color: inherit;
+  text-decoration: underline;
 }
