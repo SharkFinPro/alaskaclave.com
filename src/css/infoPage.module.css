@@ -1,16 +1,16 @@
 .wrapper {
-display: grid;
+  display: grid;
 }
 
 .container {
-width: 90%;
-max-width: 1400px;
-margin-inline: auto;
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto;
 }
 
 .header {
-background: #650812;
-color: #FFFFFF;
+  background: #650812;
+  color: #FFFFFF;
 }
 
 .main {
