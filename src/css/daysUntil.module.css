@@ -50,7 +50,7 @@
 }
 
 .registerButton:hover {
-  background: #dcdcdc;
+  filter: brightness(0.75);
 }
 
 @media (max-width: 800px) {
