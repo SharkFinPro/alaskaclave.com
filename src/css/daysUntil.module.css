@@ -26,12 +26,14 @@
   place-items: center;
   background: #ffb709;
   border-radius: 0.25em;
+  font-family: MuseoSlab, sans-serif;
 }
 
 .daysUntil > h1 {
   font-size: min(4vw, 6rem);
   color: #FFFFFF;
   margin-block: 0.5em;
+  font-family: MuseoSlab, sans-serif;
 }
 
 .registerButton {
@@ -44,6 +46,7 @@
   background: #FFFFFF;
   color: #000000;
   transition: 0.25s;
+  font-family: MuseoSans, serif;
 }
 
 .registerButton:hover {

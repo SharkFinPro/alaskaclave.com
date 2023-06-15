@@ -21,6 +21,7 @@
 .headerContent {
   padding: 1em 2em;
   font-size: min(max(2vw, 1.3rem), 2rem);
+  font-family: MuseoSlab, sans-serif;
 }
 
 .intro {
@@ -41,11 +42,13 @@
 .intro h1 {
   font-size: 2.75rem;
   margin-bottom: 0;
+  font-family: MuseoSlab, sans-serif;
 }
 
 .intro p {
   font-size: 1.15rem;
   line-height: 1.5em;
+  font-family: MuseoSans, serif;
 }
 
 @media (max-width: 800px) {

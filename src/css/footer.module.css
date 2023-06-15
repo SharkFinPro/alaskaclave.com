@@ -17,10 +17,12 @@
 
 .content h1 {
   font-size: 1.5em;
+  font-family: MuseoSlab, sans-serif;
 }
 
 .content p {
   font-size: 1.1em;
+  font-family: MuseoSans, serif;
 }
 
 .content p a {
