@@ -48,6 +48,7 @@
   border: 2px solid black;
   border-radius: 0.5rem;
   background: #650812;
+  transition: 0.25s;
 }
 
 .btn:hover {
