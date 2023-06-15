@@ -8,8 +8,12 @@ export default function Footer() {
       <div className={footerStyle.container}>
         <div className={footerStyle.content}>
           <h1>Expedition Fairbanks | alaskaclave.com</h1>
-          <p><a href={"mailto:info@alaskaclave.com"}>info@alaskaclave.com</a></p>
-          <p><a href={"https://sectiong15.oa-bsa.org/"} target={"__blank"} rel={"external"}>sectionG15.oa-bsa.org</a></p>
+          <p>
+            <a href={"mailto:info@alaskaclave.com"}>info@alaskaclave.com</a>
+          </p>
+          <p>
+            <a href={"https://sectiong15.oa-bsa.org/"} target={"__blank"} rel={"external"}>sectionG15.oa-bsa.org</a>
+          </p>
           <div className={footerStyle.icons}>
             <a href={"https://www.facebook.com/sectiong15"} title={"Section G15 Facebook"} target={"__blank"} rel={"external"}>
               <StaticImage src={"../../static/images/facebookIcon.svg"} alt={"Facebook Icon"} />
