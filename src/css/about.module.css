@@ -12,7 +12,7 @@
 
 .structure > * {
   width: 90%;
-  padding: 1rem;
+  padding: 1em;
   background: #dcdcdc;
   border-radius: 0.5rem;
   transition: 0.5s;
@@ -27,7 +27,7 @@
 }
 
 .structureEntryContent {
-  padding: 1rem;
+  padding: 1em;
 }
 
 .structureEntryContent h2 {
