@@ -53,18 +53,19 @@
 }
 
 .activityTags p {
-    font-family: "Museo Sans 500", sans serif;
-    font-size: 0.8rem;
+    font-family: MuseoSlab, serif;
+    font-size: 0.9rem;
     padding: 0.3em 1em;
     border-radius: 1rem;
+    opacity: 85%;
 }
 
 .activityTagGuidedTour {
-    background-color: #ffb709;
+    background-color: #ffbc1f;
 }
 
 .activityTagMuseum {
-    background-color: #E31837;
+    background-color: #3ec228;
 }
 
 .activityContent {
