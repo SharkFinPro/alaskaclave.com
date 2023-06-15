@@ -2,6 +2,7 @@
   font-size: 2.5rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-family: MuseoSlab, sans-serif;
 }
 
 .activitySet {
@@ -27,6 +28,7 @@
 .activity h2 {
   font-size: 2rem;
   margin-bottom: 0;
+  font-family: MuseoSlab, sans-serif;
 }
 
 .activity h2 a {
@@ -78,6 +80,7 @@
 .activityContent p {
   font-size: 1.15rem;
   line-height: 1.5em;
+  font-family: MuseoSans, serif;
 }
 
 .activityImage {

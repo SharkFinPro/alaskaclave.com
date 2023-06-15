@@ -28,12 +28,12 @@
 }
 
 .card h1 {
-  font-family: "Museo Slab 500", serif;
+  font-family: MuseoSlab, sans-serif;
   font-size: 1.5rem;
 }
 
 .card p {
-  font-family: "Museo Sans 500", sans-serif;
+  font-family: MuseoSans, serif;
 }
 
 .btn {

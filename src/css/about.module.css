@@ -1,6 +1,7 @@
 .structureTitle {
   font-size: 2.5rem;
   text-align: center;
+  font-family: MuseoSlab, sans-serif;
 }
 
 .structure {
@@ -11,9 +12,9 @@
 
 .structure > * {
   width: 90%;
-  padding: 1rem;
+  padding: 1em;
   background: #dcdcdc;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
   transition: 0.5s;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -21,16 +22,16 @@
 }
 
 .structure > *:hover {
-  border-radius: 1.5rem;
-  padding-block: 1.5rem;
+  margin-left: 2em;
+  margin-right: 0;
 }
 
 .structureEntryContent {
-  padding: 1rem;
+  padding: 1em;
 }
 
 .structureEntryContent h2 {
-  font-family: "Museo Slab 500", sans-serif;
+  font-family: MuseoSlab, sans-serif;
   font-size: 1.75rem;
 }
 
@@ -51,7 +52,7 @@
 }
 
 .structureEntryContent p {
-  font-family: "Museo Sans 500", serif;
+  font-family: MuseoSans, serif;
   font-size: 1.15rem;
   line-height: 1.5em;
   padding-inline: 1em;

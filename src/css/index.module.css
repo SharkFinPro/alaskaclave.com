@@ -38,6 +38,7 @@ header > * {
   background: rgb(0 0 0 / .6);
   color: #FFFFFF;
   font-size: min(4vw, 6rem);
+  font-family: MuseoSlab, sans-serif;
 }
 
 .intro {
@@ -55,6 +56,7 @@ header > * {
   text-align: center;
   color: #FFFFFF;
   font-size: min(3vw, 5rem);
+  font-family: MuseoSlab, sans-serif;
 }
 
 .introLogoWrapper {

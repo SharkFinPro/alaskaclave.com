@@ -1,16 +1,16 @@
 .wrapper {
-display: grid;
+  display: grid;
 }
 
 .container {
-width: 90%;
-max-width: 1400px;
-margin-inline: auto;
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto;
 }
 
 .header {
-background: #650812;
-color: #FFFFFF;
+  background: #650812;
+  color: #FFFFFF;
 }
 
 .main {
@@ -21,6 +21,7 @@ color: #FFFFFF;
 .headerContent {
   padding: 1em 2em;
   font-size: min(max(2vw, 1.3rem), 2rem);
+  font-family: MuseoSlab, sans-serif;
 }
 
 .intro {
@@ -30,22 +31,19 @@ color: #FFFFFF;
   border: none;
   border-radius: 0.5rem;
   padding: 1rem;
-  transition: 0.5s;
-}
-
-.intro:hover {
-  border-radius: 1.5rem;
-  padding-block: 1.5rem;
+  box-shadow: 0 0 20px #030006;
 }
 
 .intro h1 {
   font-size: 2.75rem;
   margin-bottom: 0;
+  font-family: MuseoSlab, sans-serif;
 }
 
 .intro p {
   font-size: 1.15rem;
   line-height: 1.5em;
+  font-family: MuseoSans, serif;
 }
 
 @media (max-width: 800px) {
