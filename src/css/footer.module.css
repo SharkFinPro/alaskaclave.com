@@ -29,3 +29,20 @@
   color: inherit;
   text-decoration: underline;
 }
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icons > * {
+  width: 45px;
+  filter: invert(1);
+}
+
+@media (max-width: 800px) {
+  .icons > * {
+    width: 35px;
+  }
+}
