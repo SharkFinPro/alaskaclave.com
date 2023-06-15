@@ -42,7 +42,7 @@
   box-sizing: border-box;
   padding: 0.5em 1.5em;
   border: 5px solid black;
-  border-radius: 1vw;
+  border-radius: 0.5em;
   background: #FFFFFF;
   color: #000000;
   transition: 0.25s;
