@@ -1,45 +1,44 @@
-.daysUntil {
+.container {
   background: #0B4662;
-  display: grid;
-  grid-template-columns: 1fr;
-  place-items: center;
   grid-column: 1 / -1;
+  display: grid;
+  justify-content: center;
+}
+
+.daysUntil {
+  max-width: 1400px;
+  display: grid;
+  justify-items: center;
+  margin-block: 2.5rem;
 }
 
 .daysCounter {
-  width: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 5%;
-  padding-inline: 10%;
-  padding-top: 5%;
-  box-sizing: border-box;
+  column-gap: 2rem;
 }
 
 .daysCounter * {
-  aspect-ratio: 1 / 1.25;
-  font-size: 12vw;
+  font-size: min(12vw, 15rem);
+  padding: 0.25em;
   margin: 0;
   display: grid;
   place-items: center;
   background: #ffb709;
-  border-radius: 5%;
+  border-radius: 0.25em;
 }
 
 .daysUntil > h1 {
-  font-size: 4vw;
+  font-size: min(4vw, 6rem);
   color: #FFFFFF;
-  margin: 0;
-  padding-block: 2.5%;
+  margin-block: 0.5em;
 }
 
 .registerButton {
-  font-size: 3.5vw;
+  font-size: min(3.5vw, 5rem);
   text-decoration: none;
   box-sizing: border-box;
-  padding-block: 1.5%;
-  margin-bottom: 5%;
-  padding-inline: 4%;
+  padding: 0.25em 1em;
   border: 5px solid black;
   border-radius: 1vw;
   background: #FFFFFF;
@@ -47,15 +46,10 @@
 }
 
 .registerButton:hover {
-background: #dcdcdc;
+  background: #dcdcdc;
 }
 
 @media (max-width: 800px) {
-  .daysCounter {
-    padding-inline: 1%;
-    width: 70%;
-  }
-
   .daysCounter * {
     font-size: 22vw;
   }
@@ -66,7 +60,5 @@ background: #dcdcdc;
 
   .registerButton {
     font-size: 7vw;
-    padding-inline: 6%;
-    padding-block: 3%;
   }
 }
