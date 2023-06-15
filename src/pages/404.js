@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { navigate } from "gatsby";
 
 export default function PageNotFound() {
-    useEffect(() => {
-        navigate("/");
-    }, []);
+  useEffect(() => {
+    navigate("/");
+  }, []);
 
-    return null;
+  return null;
 }

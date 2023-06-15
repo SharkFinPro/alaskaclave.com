@@ -1,79 +1,79 @@
 .structureTitle {
-    font-size: 2.5rem;
-    text-align: center;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 .structure {
-    display: grid;
-    justify-items: center;
-    gap: 1rem;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
 }
 
 .structure > * {
-    width: 90%;
-    padding: 1rem;
-    background: #dcdcdc;
-    border-radius: 0.5rem;
-    transition: 0.5s;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+  width: 90%;
+  padding: 1rem;
+  background: #dcdcdc;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 
 .structure > *:hover {
-    border-radius: 1.5rem;
-    padding-block: 1.5rem;
+  border-radius: 1.5rem;
+  padding-block: 1.5rem;
 }
 
 .structureEntryContent {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .structureEntryContent h2 {
-    font-family: "Museo Slab 500", sans-serif;
-    font-size: 1.75rem;
+  font-family: "Museo Slab 500", sans-serif;
+  font-size: 1.75rem;
 }
 
 .structureEntryContent h2 a {
-    color: inherit;
-    text-decoration: none;
-    transition: 0.25s;
+  color: inherit;
+  text-decoration: none;
+  transition: 0.25s;
 }
 
 .structureEntryContent h2 a:hover {
-    color: #650812;
+  color: #650812;
 }
 
 .structureEntryContent h2 a span {
-    font-size: 0.75em;
-    color: transparent;
-    text-shadow: 0 0 0 #650812;
+  font-size: 0.75em;
+  color: transparent;
+  text-shadow: 0 0 0 #650812;
 }
 
 .structureEntryContent p {
-    font-family: "Museo Sans 500", serif;
-    font-size: 1.15rem;
-    line-height: 1.5em;
-    padding-inline: 1em;
+  font-family: "Museo Sans 500", serif;
+  font-size: 1.15rem;
+  line-height: 1.5em;
+  padding-inline: 1em;
 }
 
 .structureEntryImage {
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    border-radius: 1rem;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 1rem;
 }
 
 @media (max-width: 800px) {
-    .structure > * {
-        grid-template-columns: 1fr;
-    }
+  .structure > * {
+    grid-template-columns: 1fr;
+  }
 
-    .structureEntryContent h2 {
-        font-size: 1.6rem;
-    }
+  .structureEntryContent h2 {
+    font-size: 1.6rem;
+  }
 
-    .structureEntryContent p {
-        font-size: 1rem;
-        line-height: 1.25em;
-    }
+  .structureEntryContent p {
+    font-size: 1rem;
+    line-height: 1.25em;
+  }
 }
