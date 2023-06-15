@@ -43,6 +43,7 @@
   border-radius: 1vw;
   background: #FFFFFF;
   color: #000000;
+  transition: 0.25s;
 }
 
 .registerButton:hover {
