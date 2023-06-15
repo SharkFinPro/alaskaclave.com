@@ -31,12 +31,6 @@
   border: none;
   border-radius: 0.5rem;
   padding: 1rem;
-  transition: 0.5s;
-}
-
-.intro:hover {
-  border-radius: 1.5rem;
-  padding-block: 1.5rem;
 }
 
 .intro h1 {
