@@ -1,4 +1,11 @@
+.contentContainer {
+  background: #030006;
+  display: grid;
+  justify-content: center;
+}
+
 .contentWrapper {
+  max-width: 2500px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -30,7 +37,7 @@ header > * {
   place-items: center;
   background: rgb(0 0 0 / .6);
   color: #FFFFFF;
-  font-size: 4vw;
+  font-size: min(4vw, 6rem);
 }
 
 .intro {
@@ -47,7 +54,7 @@ header > * {
 .introContent {
   text-align: center;
   color: #FFFFFF;
-  font-size: 3vw;
+  font-size: min(3vw, 5rem);
 }
 
 .introLogoWrapper {
