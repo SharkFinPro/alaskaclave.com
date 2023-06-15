@@ -19,14 +19,14 @@
   },
   "homepage": "https://github.com/SectionG15/alaskaclave.com#readme",
   "dependencies": {
-    "gatsby": "^5.10.0",
-    "gatsby-plugin-image": "^3.10.0",
-    "gatsby-plugin-manifest": "^5.10.0",
-    "gatsby-plugin-sharp": "^5.10.0",
-    "gatsby-plugin-sitemap": "^6.10.0",
-    "gatsby-source-contentful": "^8.10.0",
-    "gatsby-source-filesystem": "^5.10.0",
-    "gatsby-transformer-sharp": "^5.10.0",
+    "gatsby": "^5.11.0",
+    "gatsby-plugin-image": "^3.11.0",
+    "gatsby-plugin-manifest": "^5.11.0",
+    "gatsby-plugin-sharp": "^5.11.0",
+    "gatsby-plugin-sitemap": "^6.11.0",
+    "gatsby-source-contentful": "^8.11.0",
+    "gatsby-source-filesystem": "^5.11.0",
+    "gatsby-transformer-sharp": "^5.11.0",
     "react": "^18.2.0"
   }
 }
