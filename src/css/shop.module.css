@@ -9,32 +9,29 @@
 }
 
 .productsDisplay {
-    justify-content: center;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 1fr;
     gap: 1rem;
 }
 
 .productCard {
-    height: 450px;
     border-radius: 1rem;
     background: #dcdcdc;
-    color: #FFFFFF;
     box-shadow: 0 0 10px #030006;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    align-content: start;
+    position: relative;
 }
 
 .productCardImage {
     aspect-ratio: 4/3;
     border-radius: 0.5rem 0.5rem 0 0;
-    width: 100%;
 }
 
 .productCardText {
-    background: #0B4662;
     padding-inline: 1rem;
-    width: 100%;
+    padding-bottom: 50px;
 }
 
 .productCardName {
@@ -53,12 +50,17 @@
     font-family: "Museo Slab 500", serif;
 }
 
-@media (max-width: 800px) {
-    .productsDisplay {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
+.productCardCart {
+    position: absolute;
+    bottom: 0;
+    background: #0B4662;
+    height: 50px;
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
 
-    .productCard {
-        height: 350px;
-    }
+.productCardCart > button {
+    font-size: 1rem;
+    font-family: "Museo Slab 500", serif;
 }

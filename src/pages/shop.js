@@ -33,11 +33,15 @@ export default function Shop() {
                 <div className={shopStyles.productsDisplay}>
                     {products.map(({ node }) => (
                         <div className={shopStyles.productCard} key={node.name}>
-                            <GatsbyImage className={shopStyles.productCardImage} image={node.image?.gatsbyImageData} alt={node.name} />
+                            {/*<GatsbyImage className={shopStyles.productCardImage} image={node.image?.gatsbyImageData} alt={node.name} />*/}
+                            <GatsbyImage className={shopStyles.productCardImage} image={products[0].node.image?.gatsbyImageData} alt={node.name} />
                             <div className={shopStyles.productCardText}>
                                 <h1 className={shopStyles.productCardName}>{node.name}</h1>
                                 <p className={shopStyles.productCardDescription}>{node.description?.description}</p>
                                 <p className={shopStyles.productCardPrice}>${node.price}</p>
+                            </div>
+                            <div className={shopStyles.productCardCart}>
+                              <button>Add to Cart</button>
                             </div>
                         </div>
                     ))}
