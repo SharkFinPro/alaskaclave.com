@@ -1,0 +1,83 @@
+.productsViewer {
+  display: grid;
+}
+
+.productsViewer > h1 {
+  text-align: center;
+  font-family: "Museo Slab 500", serif;
+  font-size: 3rem;
+}
+
+.productsDisplay {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-content: center;
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+  padding-inline: 2rem;
+}
+
+.productCard {
+  border-radius: 1rem;
+  background: #dcdcdc;
+  box-shadow: 0 0 10px #030006;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.productCard * {
+  margin: 0;
+}
+
+.productCardImage {
+  aspect-ratio: 4/3;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.productCardText {
+  padding-inline: 1rem;
+  flex-grow: 1;
+}
+
+.productCardName {
+  text-align: center;
+  font-family: "Museo Slab 500", serif;
+  font-size: 1.5rem;
+  padding-block: 0.5em;
+}
+
+.productCardPrice {
+  font-size: 1.75rem;
+  color: #650812;
+  float: right;
+}
+
+.productCardDescription {
+  font-family: "Museo Sans 500", sans-serif;
+  font-size: 1rem;
+  padding-bottom: 0.5em;
+}
+
+.productCardCart {
+  height: 50px;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.productCardCart > button {
+  font-size: 1rem;
+  font-family: "Museo Slab 500", serif;
+  padding: 0.5em 2em;
+  border: 2px solid #030006;
+  border-radius: 0.5em;
+  background: #650812;
+  color: #FFFFFF;
+  transition: 0.25s;
+}
+
+.productCardCart > button:hover {
+  background: #E31837;
+}
