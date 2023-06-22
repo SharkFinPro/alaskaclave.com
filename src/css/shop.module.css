@@ -1,66 +1,73 @@
 .productsViewer {
-    display: grid;
+  display: grid;
 }
 
 .productsViewer > h1 {
-    text-align: center;
-    font-family: "Museo Slab 500", serif;
-    font-size: 3rem;
+  text-align: center;
+  font-family: "Museo Slab 500", serif;
+  font-size: 3rem;
 }
 
 .productsDisplay {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-rows: 1fr;
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 1rem;
 }
 
 .productCard {
-    border-radius: 1rem;
-    background: #dcdcdc;
-    box-shadow: 0 0 10px #030006;
-    display: grid;
-    align-content: space-between;
+  border-radius: 1rem;
+  background: #dcdcdc;
+  box-shadow: 0 0 10px #030006;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.productCard * {
+  margin: 0;
 }
 
 .productCardImage {
-    aspect-ratio: 4/3;
-    border-radius: 0.5rem 0.5rem 0 0;
+  aspect-ratio: 4/3;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .productCardText {
-    padding-inline: 1rem;
-    background: red;
+  padding-inline: 1rem;
+  flex-grow: 1;
 }
 
 .productCardName {
-    text-align: center;
-    font-family: "Museo Slab 500", serif;
-    font-size: 1.5rem;
-}
-
-.productCardDescription {
-    font-family: "Museo Sans 500", sans-serif;
-    font-size: 1rem;
+  text-align: center;
+  font-family: "Museo Slab 500", serif;
+  font-size: 1.5rem;
 }
 
 .productCardPrice {
-    font-size: 1.25rem;
-    font-family: "Museo Slab 500", serif;
+  font-size: 1.75rem;
+  color: #650812;
+  float: right;
+}
+
+.productCardDescription {
+  font-family: "Museo Sans 500", sans-serif;
+  font-size: 1rem;
 }
 
 .productCardCart {
-    background: #0B4662;
-    height: 50px;
-    width: 100%;
-    display: grid;
-    place-content: center;
+  background: #0B4662;
+  height: 50px;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .productCardCart > button {
-    font-size: 1rem;
-    font-family: "Museo Slab 500", serif;
-    padding: 0.5em 2em;
-    border: 2px solid #030006;
-    border-radius: 0.5em;
+  font-size: 1rem;
+  font-family: "Museo Slab 500", serif;
+  padding: 0.5em 2em;
+  border: 2px solid #030006;
+  border-radius: 0.5em;
 }
