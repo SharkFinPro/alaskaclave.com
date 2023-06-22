@@ -20,8 +20,7 @@
     background: #dcdcdc;
     box-shadow: 0 0 10px #030006;
     display: grid;
-    align-content: start;
-    position: relative;
+    align-content: space-between;
 }
 
 .productCardImage {
@@ -31,7 +30,7 @@
 
 .productCardText {
     padding-inline: 1rem;
-    padding-bottom: 50px;
+    background: red;
 }
 
 .productCardName {
@@ -51,8 +50,6 @@
 }
 
 .productCardCart {
-    position: absolute;
-    bottom: 0;
     background: #0B4662;
     height: 50px;
     width: 100%;
@@ -63,4 +60,7 @@
 .productCardCart > button {
     font-size: 1rem;
     font-family: "Museo Slab 500", serif;
+    padding: 0.5em 2em;
+    border: 2px solid #030006;
+    border-radius: 0.5em;
 }

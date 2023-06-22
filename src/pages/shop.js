@@ -38,6 +38,8 @@ export default function Shop() {
                             <div className={shopStyles.productCardText}>
                                 <h1 className={shopStyles.productCardName}>{node.name}</h1>
                                 <p className={shopStyles.productCardDescription}>{node.description?.description}</p>
+                                <p className={shopStyles.productCardDescription}>{node.description?.description}</p>
+                                <p className={shopStyles.productCardDescription}>{node.description?.description}</p>
                                 <p className={shopStyles.productCardPrice}>${node.price}</p>
                             </div>
                             <div className={shopStyles.productCardCart}>
