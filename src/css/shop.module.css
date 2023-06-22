@@ -42,6 +42,7 @@
   text-align: center;
   font-family: "Museo Slab 500", serif;
   font-size: 1.5rem;
+  padding-block: 0.5em;
 }
 
 .productCardPrice {
@@ -53,10 +54,10 @@
 .productCardDescription {
   font-family: "Museo Sans 500", sans-serif;
   font-size: 1rem;
+  padding-bottom: 0.5em;
 }
 
 .productCardCart {
-  background: #0B4662;
   height: 50px;
   width: 100%;
   display: grid;
@@ -70,4 +71,11 @@
   padding: 0.5em 2em;
   border: 2px solid #030006;
   border-radius: 0.5em;
+  background: #650812;
+  color: #FFFFFF;
+  transition: 0.25s;
+}
+
+.productCardCart > button:hover {
+  background: #E31837;
 }
