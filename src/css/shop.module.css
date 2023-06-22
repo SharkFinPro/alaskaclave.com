@@ -11,8 +11,10 @@
 .productsDisplay {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-content: center;
   grid-auto-rows: 1fr;
   gap: 1rem;
+  padding-inline: 2rem;
 }
 
 .productCard {
