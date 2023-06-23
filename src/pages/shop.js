@@ -9,7 +9,25 @@ function ProductCard({ node }) {
   const [selectedSize, selectSize] = useState(undefined);
 
   function addToCart() {
-    
+    let currentCart = JSON.parse(localStorage.getItem("cart"));
+    if (!currentCart) {
+      currentCart = {};
+    }
+
+    if (!currentCart[node.name]) {
+      currentCart[node.name] = node.sizes
+        ? node.sizes.reduce((a, v) => ({ ...a, [v]: 0}), {})
+        : 0;
+    }
+
+    if (node.sizes) {
+      currentCart[node.name][selectedSize]++;
+    } else {
+      currentCart[node.name]++;
+    }
+
+    localStorage.setItem("cart", JSON.stringify(currentCart));
+    window.location.reload();
   }
 
   return (
