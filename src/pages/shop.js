@@ -18,7 +18,7 @@ function ProductCard({ node }) {
         }
         <div className={shopStyles.productCardText}>
           <h1 className={shopStyles.productCardName}>
-            {node.name}
+            <span>{node.name}</span>
             <span className={shopStyles.productCardPrice}>${node.price}</span>
           </h1>
           <p className={shopStyles.productCardDescription}>{node.description?.description}</p>
