@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SEO from "../components/seo";
 import InfoPage from "../components/infoPage";
 import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import * as shopStyles from "../css/shop.module.css";
 
 function ProductCard({ node }) {
@@ -11,7 +11,11 @@ function ProductCard({ node }) {
   return (
     <div>
       <div className={shopStyles.productCard}>
-        <GatsbyImage className={shopStyles.productCardImage} image={node.image?.gatsbyImageData} alt={node.name} />
+        {
+          node.image
+            ? <GatsbyImage className={shopStyles.productCardImage} image={node.image?.gatsbyImageData} alt={node.name} />
+            : <StaticImage className={shopStyles.productCardImage} src={"../../static/images/NOT_FOUND.png"} alt={"Image not found"} />
+        }
         <div className={shopStyles.productCardText}>
           <h1 className={shopStyles.productCardName}>
             {node.name}
