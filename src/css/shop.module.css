@@ -32,7 +32,7 @@
 
 .productCardImage {
   aspect-ratio: 4/3;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .productCardText {
@@ -67,13 +67,11 @@
   justify-items: center;
   align-content: end;
   padding-block: 0.5rem;
-  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .productCardSizes {
   display: flex;
   gap: 0.25rem;
-  justify-content: center;
 }
 
 .productCardSizes > * {

@@ -8,6 +8,10 @@ import * as shopStyles from "../css/shop.module.css";
 function ProductCard({ node }) {
   const [selectedSize, selectSize] = useState(undefined);
 
+  function addToCart() {
+    
+  }
+
   return (
     <div>
       <div className={shopStyles.productCard}>
@@ -33,7 +37,7 @@ function ProductCard({ node }) {
               </button>
             ))}
           </p>
-          <button disabled={!selectedSize && node.sizes}>Add to Cart</button>
+          <button disabled={!selectedSize && node.sizes} onClick={addToCart}>Add to Cart</button>
         </div>
       </div>
     </div>
