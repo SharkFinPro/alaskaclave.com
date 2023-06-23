@@ -4,7 +4,6 @@ import InfoPage from "../components/infoPage";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import * as shopStyles from "../css/shop.module.css";
-import {sizes} from "gatsby-plugin-sharp";
 
 function ProductCard({ node }) {
   const [selectedSize, selectSize] = useState(undefined);
