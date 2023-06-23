@@ -1,9 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import SEO from "../components/seo";
 import InfoPage from "../components/infoPage";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import * as shopStyles from "../css/shop.module.css";
+import {sizes} from "gatsby-plugin-sharp";
+
+function ProductCard({ node }) {
+  const [selectedSize, selectSize] = useState(undefined);
+
+  return (
+    <div>
+      <div className={shopStyles.productCard}>
+        <GatsbyImage className={shopStyles.productCardImage} image={node.image?.gatsbyImageData} alt={node.name} />
+        <div className={shopStyles.productCardText}>
+          <h1 className={shopStyles.productCardName}>
+            {node.name}
+            <span className={shopStyles.productCardPrice}>${node.price}</span>
+          </h1>
+          <p className={shopStyles.productCardDescription}>{node.description?.description}</p>
+        </div>
+        <div className={shopStyles.productCardCart}>
+          <p className={shopStyles.productCardSizes}>
+            {node.sizes?.map((size) => (
+              <button
+                className={`${selectedSize === size ? shopStyles.selectedSize : ""}`}
+                onClick={() => selectSize(size)}>
+                {size}
+              </button>
+            ))}
+          </p>
+          <button disabled={!selectedSize && node.sizes}>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Shop() {
   const { allContentfulTradingPostProduct } = useStaticQuery(graphql`
@@ -34,24 +66,7 @@ export default function Shop() {
         <h1>Products</h1>
         <div className={shopStyles.productsDisplay}>
           {products.map(({ node }) => (
-            <div key={node.name}>
-              <div className={shopStyles.productCard}>
-                {/*<GatsbyImage className={shopStyles.productCardImage} image={node.image?.gatsbyImageData} alt={node.name} />*/}
-                <GatsbyImage className={shopStyles.productCardImage} image={products[6].node.image?.gatsbyImageData} alt={node.name} />
-                <div className={shopStyles.productCardText}>
-                  <h1 className={shopStyles.productCardName}>{node.name}<span className={shopStyles.productCardPrice}>${node.price}</span></h1>
-                  <p className={shopStyles.productCardSizes}>
-                    {node.sizes?.map((size) => (
-                      <span>{size}</span>
-                    ))}
-                  </p>
-                  <p className={shopStyles.productCardDescription}>{node.description?.description}</p>
-                </div>
-                <div className={shopStyles.productCardCart}>
-                  <button>Add to Cart</button>
-                </div>
-              </div>
-            </div>
+            <ProductCard node={node} key={node.id} />
           ))}
         </div>
       </div>

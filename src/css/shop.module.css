@@ -53,6 +53,22 @@
   float: right;
 }
 
+.productCardDescription {
+  font-family: "Museo Sans 500", sans-serif;
+  font-size: 1rem;
+  padding-bottom: 0.5em;
+}
+
+.productCardCart {
+  height: 100px;
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+  align-content: end;
+  padding-block: 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
 .productCardSizes {
   display: flex;
   gap: 0.25rem;
@@ -62,24 +78,23 @@
 .productCardSizes > * {
   background: #030006;
   color: #FFFFFF;
-  padding: 0.25em;
+  width: 30px;
+  aspect-ratio: 1 / 1;
   border-radius: 0.25em;
   font-family: "Museo Sans 500", sans-serif;
   font-size: 0.9rem;
-}
-
-.productCardDescription {
-  font-family: "Museo Sans 500", sans-serif;
-  font-size: 1rem;
-  padding-bottom: 0.5em;
-}
-
-.productCardCart {
-  height: 50px;
-  width: 100%;
   display: grid;
   place-content: center;
-  border-radius: 0 0 0.5rem 0.5rem;
+  transition: 0.25s;
+  border: 2px solid #030006;
+}
+
+.productCardSizes > *:hover {
+  background: #650812;
+}
+
+.selectedSize {
+  background: #650812;
 }
 
 .productCardCart > button {
@@ -93,6 +108,6 @@
   transition: 0.25s;
 }
 
-.productCardCart > button:hover {
+.productCardCart > button:enabled:hover {
   background: #E31837;
 }
