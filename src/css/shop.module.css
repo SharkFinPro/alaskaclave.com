@@ -53,6 +53,21 @@
   float: right;
 }
 
+.productCardSizes {
+  display: flex;
+  gap: 0.25rem;
+  justify-content: center;
+}
+
+.productCardSizes > * {
+  background: #030006;
+  color: #FFFFFF;
+  padding: 0.25em;
+  border-radius: 0.25em;
+  font-family: "Museo Sans 500", sans-serif;
+  font-size: 0.9rem;
+}
+
 .productCardDescription {
   font-family: "Museo Sans 500", sans-serif;
   font-size: 1rem;

@@ -19,6 +19,7 @@ export default function Shop() {
             image {
               gatsbyImageData
             }
+            sizes
           }
         }
       }
@@ -36,9 +37,14 @@ export default function Shop() {
             <div key={node.name}>
               <div className={shopStyles.productCard}>
                 {/*<GatsbyImage className={shopStyles.productCardImage} image={node.image?.gatsbyImageData} alt={node.name} />*/}
-                <GatsbyImage className={shopStyles.productCardImage} image={products[0].node.image?.gatsbyImageData} alt={node.name} />
+                <GatsbyImage className={shopStyles.productCardImage} image={products[6].node.image?.gatsbyImageData} alt={node.name} />
                 <div className={shopStyles.productCardText}>
                   <h1 className={shopStyles.productCardName}>{node.name}<span className={shopStyles.productCardPrice}>${node.price}</span></h1>
+                  <p className={shopStyles.productCardSizes}>
+                    {node.sizes?.map((size) => (
+                      <span>{size}</span>
+                    ))}
+                  </p>
                   <p className={shopStyles.productCardDescription}>{node.description?.description}</p>
                 </div>
                 <div className={shopStyles.productCardCart}>
