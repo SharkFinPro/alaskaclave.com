@@ -1,7 +1,7 @@
 {
   "name": "alaskaclave.com",
   "version": "1.0.0",
-  "description": "Expediton Fairbanks's Website",
+  "description": "Expedition Fairbanks's Website",
   "scripts": {
     "start": "gatsby develop -p 80 -H 0.0.0.0",
     "build": "gatsby build",
@@ -27,6 +27,7 @@
     "gatsby-source-contentful": "^8.11.0",
     "gatsby-source-filesystem": "^5.11.0",
     "gatsby-transformer-sharp": "^5.11.0",
+    "mongodb": "^5.6.0",
     "react": "^18.2.0"
   }
 }
