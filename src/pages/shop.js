@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import SEO from "../components/seo";
 import InfoPage from "../components/infoPage";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import useTradingPostProducts from "../hooks/useTradingPostProducts";
 import * as shopStyles from "../css/shop.module.css";
 
 function ProductCard({ node }) {
@@ -62,27 +63,7 @@ function ProductCard({ node }) {
 }
 
 export default function Shop() {
-  const { allContentfulTradingPostProduct } = useStaticQuery(graphql`
-    query {
-      allContentfulTradingPostProduct {
-        edges {
-          node {
-            name
-            description {
-              description
-            }
-            price
-            image {
-              gatsbyImageData
-            }
-            sizes
-          }
-        }
-      }
-    }
-  `);
-
-  const products = allContentfulTradingPostProduct.edges;
+  const products = useTradingPostProducts();
 
   return (
     <InfoPage title={"Shop"} description={"Preorder items from the Trading Post!"}>

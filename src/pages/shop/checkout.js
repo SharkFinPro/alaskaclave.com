@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import SEO from "../../components/seo";
 import Footer from "../../components/footer";
-import { graphql, navigate, useStaticQuery } from "gatsby";
+import { navigate } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import useTradingPostProducts from "../../hooks/useTradingPostProducts";
 import * as checkoutStyles from "../../css/checkout.module.css";
 
 function CartItem({ product, count, size, removeProduct, updateProductCount }) {
@@ -115,33 +116,13 @@ function Cart({ products, cart, setCart }) {
 }
 
 export default function Checkout() {
-  const { allContentfulTradingPostProduct } = useStaticQuery(graphql`
-    query {
-      allContentfulTradingPostProduct {
-        edges {
-          node {
-            name
-            description {
-              description
-            }
-            price
-            image {
-              gatsbyImageData
-            }
-            sizes
-          }
-        }
-      }
-    }
-  `);
-
-  const products = allContentfulTradingPostProduct.edges;
-
   const [cart, setCart] = useState({});
   const [totalPrice, setTotalPrice] = useState(0);
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [phone, setPhone] = useState();
+
+  const products = useTradingPostProducts();
 
   function updateTotalPrice() {
     let total = 0;
