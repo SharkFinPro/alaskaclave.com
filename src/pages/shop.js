@@ -49,6 +49,7 @@ function ProductCard({ node }) {
           <p className={shopStyles.productCardSizes}>
             {node.sizes?.map((size) => (
               <button
+                key={node.name + size}
                 className={`${selectedSize === size ? shopStyles.selectedSize : ""}`}
                 onClick={() => selectSize(size)}>
                 {size}
@@ -91,7 +92,7 @@ export default function Shop() {
         <h1>Products</h1>
         <div className={shopStyles.productsDisplay}>
           {products.map(({ node }) => (
-            <ProductCard node={node} key={node.id} />
+            <ProductCard node={node} key={node.name} />
           ))}
         </div>
       </div>
