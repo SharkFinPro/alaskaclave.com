@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SEO from "../components/seo";
 import InfoPage from "../components/infoPage";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import * as shopStyles from "../css/shop.module.css";
 
@@ -94,6 +94,9 @@ export default function Shop() {
             <ProductCard node={node} key={node.id} />
           ))}
         </div>
+      </div>
+      <div className={shopStyles.checkoutButton}>
+        <Link to={"/shop/checkout"}>Checkout</Link>
       </div>
     </InfoPage>
   )

@@ -116,3 +116,25 @@
 .productCardCart > button:enabled:hover {
   background: #E31837;
 }
+
+.checkoutButton {
+  display: grid;
+  place-items: center;
+  padding-block: 2rem;
+}
+
+.checkoutButton a {
+  background: #650812;
+  color: #FFFFFF;
+  border: 5px solid #030006;
+  border-radius: 0.5em;
+  text-decoration: none;
+  font-family: MuseoSans, serif;
+  font-size: 2rem;
+  padding: 0.5em 2em;
+  transition: 0.25s;
+}
+
+.checkoutButton a:hover {
+  background: #E31837;
+}
