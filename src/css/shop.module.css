@@ -94,11 +94,7 @@
   border: 2px solid #030006;
 }
 
-.productCardSizes > *:hover {
-  background: #650812;
-}
-
-.selectedSize {
+.productCardSizes > *:hover, .selectedSize {
   background: #650812;
 }
 
