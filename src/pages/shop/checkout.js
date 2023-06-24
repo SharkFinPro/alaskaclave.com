@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SEO from "../../components/seo";
 import Footer from "../../components/footer";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, navigate, useStaticQuery } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import * as checkoutStyles from "../../css/checkout.module.css";
 
@@ -174,6 +174,13 @@ export default function Checkout() {
       mode: "same-origin",
       body: JSON.stringify(payload)
     });
+
+    if (response.status !== 200) {
+      alert("Error submitting order!");
+    } else {
+      localStorage.setItem("cart", JSON.stringify({}));
+      await navigate("/shop");
+    }
   }
 
   return <>
