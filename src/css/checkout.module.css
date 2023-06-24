@@ -60,9 +60,36 @@
 
 .cartItemCount {
   font-family: MuseoSans, serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   padding: 1rem;
+  display: grid;
+  justify-items: center;
 }
+
+.cartItemCountInteractable {
+  display: flex;
+}
+
+.cartItemCountInteractable > * {
+  background: #FFFFFF;
+  border: 2px solid black;
+  width: 50px;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-content: center;
+}
+
+.cartItemCountInteractable > button {
+  font-size: 1.75rem;
+  background: #650812;
+  color: #FFFFFF;
+  transition: 0.25s;
+}
+.cartItemCountInteractable > button:hover {
+  font-size: 1.75rem;
+  background: #E31837;
+}
+
 
 .cartItemTotal {
   font-family: MuseoSans, serif;
