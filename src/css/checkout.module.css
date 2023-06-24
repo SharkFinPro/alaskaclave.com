@@ -97,9 +97,15 @@
   color: #FFFFFF;
   transition: 0.25s;
 }
+
 .cartItemCountInteractable > button:hover {
   font-size: 1.75rem;
   background: #E31837;
+}
+
+.cartItemCountInteractable > span {
+  border-left: none;
+  border-right: none;
 }
 
 @media (min-width: 800px) {
