@@ -163,6 +163,21 @@ export default function Checkout() {
   }, [cart]);
 
   async function submit() {
+    if (!name) {
+      alert("Please enter your name!");
+      return;
+    }
+
+    if (!email) {
+      alert("Please enter your email!");
+      return;
+    }
+
+    if (!phone) {
+      alert("Please enter your phone number!");
+      return;
+    }
+
     const payload = {
       name,
       email,
