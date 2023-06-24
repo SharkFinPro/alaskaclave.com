@@ -31,10 +31,6 @@
   align-items: center;
 }
 
-.cartItem > * {
-  margin: 0;
-}
-
 .cartItemImage {
   width: 200px;
   aspect-ratio: 4/3;
