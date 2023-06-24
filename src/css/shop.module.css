@@ -1,8 +1,4 @@
-.productsViewer {
-  display: grid;
-}
-
-.productsViewer > h1 {
+.productsDisplayTitle {
   text-align: center;
   font-family: "Museo Slab 500", serif;
   font-size: 3rem;
@@ -114,9 +110,8 @@
 }
 
 .checkoutButton {
-  display: grid;
-  place-items: center;
-  padding-block: 2rem;
+  text-align: center;
+  margin-top: 3rem;
 }
 
 .checkoutButton a {

@@ -31,33 +31,31 @@ function ProductCard({ node }) {
   }
 
   return (
-    <div>
-      <div className={shopStyles.productCard}>
-        {
-          node.image
-            ? <GatsbyImage className={shopStyles.productCardImage} image={node.image?.gatsbyImageData} alt={node.name} />
-            : <StaticImage className={shopStyles.productCardImage} src={"../../static/images/NOT_FOUND.png"} alt={"Image not found"} />
-        }
-        <div className={shopStyles.productCardText}>
-          <h1 className={shopStyles.productCardName}>
-            <span>{node.name}</span>
-            <span className={shopStyles.productCardPrice}>${node.price}</span>
-          </h1>
-          <p className={shopStyles.productCardDescription}>{node.description?.description}</p>
-        </div>
-        <div className={shopStyles.productCardCart}>
-          <p className={shopStyles.productCardSizes}>
-            {node.sizes?.map((size) => (
-              <button
-                key={node.name + size}
-                className={`${selectedSize === size ? shopStyles.selectedSize : ""}`}
-                onClick={() => selectSize(size)}>
-                {size}
-              </button>
-            ))}
-          </p>
-          <button disabled={!selectedSize && node.sizes} onClick={addToCart}>Add to Cart</button>
-        </div>
+    <div className={shopStyles.productCard}>
+      {
+        node.image
+          ? <GatsbyImage className={shopStyles.productCardImage} image={node.image?.gatsbyImageData} alt={node.name} />
+          : <StaticImage className={shopStyles.productCardImage} src={"../../static/images/NOT_FOUND.png"} alt={"Image not found"} />
+      }
+      <div className={shopStyles.productCardText}>
+        <h1 className={shopStyles.productCardName}>
+          <span>{node.name}</span>
+          <span className={shopStyles.productCardPrice}>${node.price}</span>
+        </h1>
+        <p className={shopStyles.productCardDescription}>{node.description?.description}</p>
+      </div>
+      <div className={shopStyles.productCardCart}>
+        <p className={shopStyles.productCardSizes}>
+          {node.sizes?.map((size) => (
+            <button
+              key={node.name + size}
+              className={`${selectedSize === size ? shopStyles.selectedSize : ""}`}
+              onClick={() => selectSize(size)}>
+              {size}
+            </button>
+          ))}
+        </p>
+        <button disabled={!selectedSize && node.sizes} onClick={addToCart}>Add to Cart</button>
       </div>
     </div>
   );
@@ -88,17 +86,13 @@ export default function Shop() {
 
   return (
     <InfoPage title={"Shop"} description={"Preorder items from the Trading Post!"}>
-      <div className={shopStyles.productsViewer}>
-        <h1>Products</h1>
-        <div className={shopStyles.productsDisplay}>
-          {products.map(({ node }) => (
-            <ProductCard node={node} key={node.name} />
-          ))}
-        </div>
+      <h1 className={shopStyles.productsDisplayTitle}>Products</h1>
+      <div className={shopStyles.productsDisplay}>
+        {products.map(({ node }) => (
+          <ProductCard node={node} key={node.name} />
+        ))}
       </div>
-      <div className={shopStyles.checkoutButton}>
-        <Link to={"/shop/checkout"}>Checkout</Link>
-      </div>
+      <p className={shopStyles.checkoutButton}><Link to={"/shop/checkout"}>Checkout</Link></p>
     </InfoPage>
   )
 }
