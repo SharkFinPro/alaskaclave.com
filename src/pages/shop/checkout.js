@@ -16,10 +16,6 @@ function CartItem({ product, count, size, removeProduct, updateProductCount }) {
     return;
   }
 
-  function remove() {
-    updateProductCount(product.name, size);
-  }
-
   function add() {
     setCurrentCount(currentCount + 1);
   }
@@ -36,8 +32,16 @@ function CartItem({ product, count, size, removeProduct, updateProductCount }) {
     <div className={checkoutStyles.cartItem}>
       {
         product.image
-          ? <GatsbyImage className={checkoutStyles.cartItemImage} image={product.image?.gatsbyImageData} alt={product.name} />
-          : <StaticImage className={checkoutStyles.cartItemImage} src={"../../../static/images/NOT_FOUND.png"} alt={"Image not found"} />
+          ? <GatsbyImage
+              className={checkoutStyles.cartItemImage}
+              image={product.image?.gatsbyImageData}
+              alt={product.name}
+            />
+          : <StaticImage
+              className={checkoutStyles.cartItemImage}
+              src={"../../../static/images/NOT_FOUND.png"}
+              alt={"Image not found"}
+            />
       }
       <h2 className={checkoutStyles.cartItemName}>{product.name}</h2>
       {
@@ -83,7 +87,6 @@ function Cart({ products, cart, setCart }) {
 
     localStorage.setItem("cart", JSON.stringify(currentCart));
     updateCart();
-
   }
 
   return (
