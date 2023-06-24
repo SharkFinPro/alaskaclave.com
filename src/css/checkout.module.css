@@ -1,0 +1,51 @@
+.cart {
+  display: grid;
+  max-width: 1600px;
+  margin-inline: auto;
+  background: #030006;
+  gap: 1px;
+}
+
+.cartItem {
+  background: #dcdcdc;
+  display: flex;
+  align-items: center;
+}
+
+.cartItem > * {
+  margin: 0;
+}
+
+.cartItemImage {
+  width: 200px;
+  aspect-ratio: 4/3;
+}
+
+.cartItemName {
+  font-size: 2rem;
+  font-family: MuseoSlab, sans-serif;
+  padding: 1rem;
+}
+
+.cartItemSize {
+  background: #030006;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-family: MuseoSans, serif;
+  width: 40px;
+  border-radius: 0.25em;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-content: center;
+}
+
+.cartItemCount {
+  font-family: MuseoSans, serif;
+  padding: 1rem;
+}
+
+@media (max-width: 800px) {
+  .cartItem {
+    flex-direction: column;
+  }
+}
