@@ -71,10 +71,18 @@ function Cart() {
     <div className={checkoutStyles.cart}>
       {Object.keys(currentCart).map((cartItem) => {
         if (typeof currentCart[cartItem] === "number") {
-          return <CartItem product={products.find((p) => p.node.name === cartItem).node} count={currentCart[cartItem]} size={false} key={cartItem} />
+          return <CartItem
+            product={products.find((p) => p.node.name === cartItem).node}
+            count={currentCart[cartItem]}
+            size={false}
+            key={cartItem} />
         } else {
           return Object.keys(currentCart[cartItem]).map((cartItemSize) => (
-            <CartItem product={products.find((p) => p.node.name === cartItem).node} count={currentCart[cartItem][cartItemSize]} size={cartItemSize} key={cartItemSize}/>
+            <CartItem
+              product={products.find((p) => p.node.name === cartItem).node}
+              count={currentCart[cartItem][cartItemSize]}
+              size={cartItemSize}
+              key={cartItemSize}/>
           ));
         }
       })}
