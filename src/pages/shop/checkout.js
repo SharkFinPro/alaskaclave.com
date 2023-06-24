@@ -221,28 +221,26 @@ export default function Checkout() {
       <h1>Checkout</h1>
       <Cart products={products} cart={cart} setCart={setCart} />
       <h2 className={checkoutStyles.totalPrice}>Total: ${totalPrice}</h2>
-      <div className={checkoutStyles.userInfoContainer}>
-        <div className={checkoutStyles.userInfo}>
-          <div className={checkoutStyles.userInfoData}>
-            <label htmlFor={"name"}>Name</label>
-            <input
-              name={"name"}
-              onInput={e => setName(e.target.value)} />
-          </div>
-          <div className={checkoutStyles.userInfoData}>
-            <label htmlFor={"email"}>Email</label>
-            <input
-              type={"email"}
-              name={"email"}
-              onInput={e => setEmail(e.target.value)} />
-          </div>
-          <div className={checkoutStyles.userInfoData}>
-            <label htmlFor={"phone"}>Phone Number</label>
-            <input
-              type={"tel"}
-              name={"phone"}
-              onInput={e => setPhone(e.target.value)} />
-          </div>
+      <div className={checkoutStyles.userInfo}>
+        <div className={checkoutStyles.userInfoData}>
+          <label htmlFor={"name"}>Name</label>
+          <input
+            name={"name"}
+            onInput={e => setName(e.target.value)} />
+        </div>
+        <div className={checkoutStyles.userInfoData}>
+          <label htmlFor={"email"}>Email</label>
+          <input
+            type={"email"}
+            name={"email"}
+            onInput={e => setEmail(e.target.value)} />
+        </div>
+        <div className={checkoutStyles.userInfoData}>
+          <label htmlFor={"phone"}>Phone Number</label>
+          <input
+            type={"tel"}
+            name={"phone"}
+            onInput={e => setPhone(e.target.value)} />
         </div>
       </div>
       <div className={checkoutStyles.submitContainer}>
