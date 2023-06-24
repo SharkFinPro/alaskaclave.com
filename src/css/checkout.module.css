@@ -19,7 +19,7 @@
 
 .cart {
   display: grid;
-  max-width: 1600px;
+  max-width: 1000px;
   margin-inline: auto;
   background: #030006;
   gap: 1px;
@@ -58,10 +58,22 @@
   place-content: center;
 }
 
+.cartItemTotal {
+  font-family: MuseoSans, serif;
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+
 .cartItemCount {
   font-family: MuseoSans, serif;
   font-size: 1.5rem;
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cartItemCountAmount {
   display: grid;
   justify-items: center;
 }
@@ -90,11 +102,10 @@
   background: #E31837;
 }
 
-
-.cartItemTotal {
-  font-family: MuseoSans, serif;
-  font-size: 1.25rem;
-  padding: 1rem;
+@media (min-width: 800px) {
+  .cartItemCount {
+    margin-left: auto;
+  }
 }
 
 @media (max-width: 800px) {
@@ -103,6 +114,10 @@
   }
 
   .cartItem {
+    flex-direction: column;
+  }
+
+  .cartItemCount {
     flex-direction: column;
   }
 }

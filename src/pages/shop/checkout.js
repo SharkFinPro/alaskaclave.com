@@ -44,14 +44,16 @@ function CartItem({ product, count, size, removeProduct, updateProductCount }) {
         size ? <p className={checkoutStyles.cartItemSize}>{size}</p> : <></>
       }
       <div className={checkoutStyles.cartItemCount}>
-        <p>Amount</p>
-        <p className={checkoutStyles.cartItemCountInteractable}>
-          <button onClick={subtract}>-</button>
-          <span>{currentCount}</span>
-          <button onClick={add}>+</button>
-        </p>
+        <p>Total: ${currentCount * product.price}</p>
+        <div className={checkoutStyles.cartItemCountAmount}>
+          <p>Amount</p>
+          <p className={checkoutStyles.cartItemCountInteractable}>
+            <button onClick={subtract}>-</button>
+            <span>{currentCount}</span>
+            <button onClick={add}>+</button>
+          </p>
+        </div>
       </div>
-      <p className={checkoutStyles.cartItemCount}>Total: ${count * product.price}</p>
     </div>
   )
 }
