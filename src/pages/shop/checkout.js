@@ -3,8 +3,7 @@ import SEO from "../../components/seo";
 import Footer from "../../components/footer";
 import { graphql, useStaticQuery } from "gatsby";
 import * as checkoutStyles from "../../css/checkout.module.css";
-import {GatsbyImage, StaticImage} from "gatsby-plugin-image";
-import * as shopStyles from "../../css/shop.module.css";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 
 function CartItem({ product, count, size }) {
   if (!count) {
@@ -23,6 +22,8 @@ function CartItem({ product, count, size }) {
         size ? <p className={checkoutStyles.cartItemSize}>{size}</p> : <></>
       }
       <p className={checkoutStyles.cartItemCount}>Amount: {count}</p>
+      <p className={checkoutStyles.cartItemCount}>Total: ${count * product.price}</p>
+      <button>Remove</button>
     </div>
   )
 }
@@ -55,6 +56,17 @@ function Cart() {
     currentCart = {};
   }
 
+  let totalPrice = 0;
+  for (let item in currentCart) {
+    if (typeof currentCart[item] === "number") {
+      totalPrice += currentCart[item] * products.find((p) => p.node.name === item).node.price;
+    } else {
+      for (let itemSize in currentCart[item]) {
+        totalPrice += currentCart[item][itemSize] * products.find((p) => p.node.name === item).node.price;
+      }
+    }
+  }
+
   return (
     <div className={checkoutStyles.cart}>
       {Object.keys(currentCart).map((cartItem) => {
@@ -63,7 +75,7 @@ function Cart() {
         } else {
           return Object.keys(currentCart[cartItem]).map((cartItemSize) => (
             <CartItem product={products.find((p) => p.node.name === cartItem).node} count={currentCart[cartItem][cartItemSize]} size={cartItemSize} key={cartItemSize}/>
-        ));
+          ));
         }
       })}
     </div>
@@ -71,13 +83,13 @@ function Cart() {
 }
 
 export default function Checkout() {
-  return (
-    <div>
+  return <>
+    <div className={checkoutStyles.container}>
       <h1>Checkout</h1>
       <Cart />
-      <Footer />
     </div>
-  )
+    <Footer />
+  </>
 }
 
 export const Head = () => (

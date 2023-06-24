@@ -1,3 +1,22 @@
+.container {
+  background: #D6CEBD;
+  padding-bottom: 1rem;
+}
+
+.container * {
+  margin: 0;
+}
+
+.container > h1 {
+  background: #0B4662;
+  font-family: MuseoSlab, sans-serif;
+  font-size: 4rem;
+  color: #FFFFFF;
+  min-height: 200px;
+  display: grid;
+  place-content: center;
+}
+
 .cart {
   display: grid;
   max-width: 1600px;
@@ -41,10 +60,21 @@
 
 .cartItemCount {
   font-family: MuseoSans, serif;
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+
+.cartItemTotal {
+  font-family: MuseoSans, serif;
+  font-size: 1.25rem;
   padding: 1rem;
 }
 
 @media (max-width: 800px) {
+  .container > h1 {
+    font-size: 3rem;
+  }
+
   .cartItem {
     flex-direction: column;
   }
