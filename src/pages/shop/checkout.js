@@ -206,20 +206,23 @@ export default function Checkout() {
       <div className={checkoutStyles.userInfoContainer}>
         <div className={checkoutStyles.userInfo}>
           <div className={checkoutStyles.userInfoData}>
-            <label>Name</label>
+            <label htmlFor={"name"}>Name</label>
             <input
+              name={"name"}
               onInput={e => setName(e.target.value)} />
           </div>
           <div className={checkoutStyles.userInfoData}>
-            <label>Email</label>
+            <label htmlFor={"email"}>Email</label>
             <input
               type={"email"}
+              name={"email"}
               onInput={e => setEmail(e.target.value)} />
           </div>
           <div className={checkoutStyles.userInfoData}>
-            <label>Phone Number</label>
+            <label htmlFor={"phone"}>Phone Number</label>
             <input
               type={"tel"}
+              name={"phone"}
               onInput={e => setPhone(e.target.value)} />
           </div>
         </div>
