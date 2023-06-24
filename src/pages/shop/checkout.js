@@ -162,7 +162,14 @@ export default function Checkout() {
     updateTotalPrice();
   }, [cart]);
 
+  let orderSubmitted = false;
   async function submit() {
+    if (orderSubmitted) {
+      return;
+    }
+
+    orderSubmitted = true;
+
     if (!name) {
       alert("Please enter your name!");
       return;
@@ -173,8 +180,18 @@ export default function Checkout() {
       return;
     }
 
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      alert("Please enter a valid email address!");
+      return;
+    }
+
     if (!phone) {
       alert("Please enter your phone number!");
+      return;
+    }
+
+    if (!/^\d{10}$/.test(phone)) {
+      alert("Please enter a valid 10-digit phone number!");
       return;
     }
 
@@ -192,6 +209,7 @@ export default function Checkout() {
 
     if (response.status !== 200) {
       alert("Error submitting order!");
+      orderSubmitted = false;
     } else {
       localStorage.setItem("cart", JSON.stringify({}));
       await navigate("/shop");
