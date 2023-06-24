@@ -153,6 +153,27 @@
   font-size: 1rem;
 }
 
+.submitContainer {
+  display: grid;
+  place-items: center;
+  margin: 1rem;
+}
+
+.submit {
+  font-family: MuseoSans, serif;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  padding: 0.5em 3em;
+  border: 4px solid #030006;
+  border-radius: 0.5em;
+  background: #650812;
+  transition: 0.25s;
+}
+
+.submit:hover {
+  background: #e31837;
+}
+
 @media (min-width: 800px) {
   .cartItemCount {
     margin-left: auto;

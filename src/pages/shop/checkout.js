@@ -139,6 +139,9 @@ export default function Checkout() {
 
   const [cart, setCart] = useState({});
   const [totalPrice, setTotalPrice] = useState(0);
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [phone, setPhone] = useState();
 
   function updateTotalPrice() {
     let total = 0;
@@ -159,6 +162,20 @@ export default function Checkout() {
     updateTotalPrice();
   }, [cart]);
 
+  async function submit() {
+    const payload = {
+      name,
+      email,
+      phone,
+      cart
+    };
+    const response = await fetch("/api/preorder", {
+      method: "POST",
+      mode: "same-origin",
+      body: JSON.stringify(payload)
+    });
+  }
+
   return <>
     <div className={checkoutStyles.container}>
       <h1>Checkout</h1>
@@ -168,17 +185,29 @@ export default function Checkout() {
         <div className={checkoutStyles.userInfo}>
           <div className={checkoutStyles.userInfoData}>
             <label>Name</label>
-            <input/>
+            <input
+              onInput={e => setName(e.target.value)} />
           </div>
           <div className={checkoutStyles.userInfoData}>
             <label>Email</label>
-            <input type={"email"} />
+            <input
+              type={"email"}
+              onInput={e => setEmail(e.target.value)} />
           </div>
           <div className={checkoutStyles.userInfoData}>
             <label>Phone Number</label>
-            <input type={"tel"}/>
+            <input
+              type={"tel"}
+              onInput={e => setPhone(e.target.value)} />
           </div>
         </div>
+      </div>
+      <div className={checkoutStyles.submitContainer}>
+        <button
+          className={checkoutStyles.submit}
+          onClick={submit}>
+          Submit
+        </button>
       </div>
     </div>
     <Footer />
