@@ -108,6 +108,13 @@
   border-right: none;
 }
 
+.totalPrice {
+  text-align: center;
+  font-family: MuseoSans, serif;
+  font-size: 2rem;
+  padding-block: 1rem;
+}
+
 @media (min-width: 800px) {
   .cartItemCount {
     margin-left: auto;

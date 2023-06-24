@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import SEO from "../../components/seo";
 import Footer from "../../components/footer";
 import { graphql, useStaticQuery } from "gatsby";
-import * as checkoutStyles from "../../css/checkout.module.css";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import * as checkoutStyles from "../../css/checkout.module.css";
 
 function CartItem({ product, count, size, removeProduct, updateProductCount }) {
   const [currentCount, setCurrentCount] = useState(count);
@@ -58,31 +58,7 @@ function CartItem({ product, count, size, removeProduct, updateProductCount }) {
   )
 }
 
-function Cart() {
-  const { allContentfulTradingPostProduct } = useStaticQuery(graphql`
-    query {
-      allContentfulTradingPostProduct {
-        edges {
-          node {
-            name
-            description {
-              description
-            }
-            price
-            image {
-              gatsbyImageData
-            }
-            sizes
-          }
-        }
-      }
-    }
-  `);
-
-  const products = allContentfulTradingPostProduct.edges;
-
-  const [cart, setCart] = useState({});
-
+function Cart({ products, cart, setCart }) {
   function updateCart() {
     let currentCart = JSON.parse(localStorage.getItem("cart"));
     if (!currentCart) {
@@ -110,17 +86,6 @@ function Cart() {
 
   }
 
-  // let totalPrice = 0;
-  // for (let item in currentCart) {
-  //   if (typeof currentCart[item] === "number") {
-  //     totalPrice += currentCart[item] * products.find((p) => p.node.name === item).node.price;
-  //   } else {
-  //     for (let itemSize in currentCart[item]) {
-  //       totalPrice += currentCart[item][itemSize] * products.find((p) => p.node.name === item).node.price;
-  //     }
-  //   }
-  // }
-
   return (
     <div className={checkoutStyles.cart}>
       {Object.keys(cart).map((cartItem) => {
@@ -147,10 +112,55 @@ function Cart() {
 }
 
 export default function Checkout() {
+  const { allContentfulTradingPostProduct } = useStaticQuery(graphql`
+    query {
+      allContentfulTradingPostProduct {
+        edges {
+          node {
+            name
+            description {
+              description
+            }
+            price
+            image {
+              gatsbyImageData
+            }
+            sizes
+          }
+        }
+      }
+    }
+  `);
+
+  const products = allContentfulTradingPostProduct.edges;
+
+  const [cart, setCart] = useState({});
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  function updateTotalPrice() {
+    let total = 0;
+    for (let item in cart) {
+      if (typeof cart[item] === "number") {
+        total += cart[item] * products.find((p) => p.node.name === item).node.price;
+      } else {
+        for (let itemSize in cart[item]) {
+          total += cart[item][itemSize] * products.find((p) => p.node.name === item).node.price;
+        }
+      }
+    }
+
+    setTotalPrice(total);
+  }
+
+  useEffect(() => {
+    updateTotalPrice();
+  }, [cart]);
+
   return <>
     <div className={checkoutStyles.container}>
       <h1>Checkout</h1>
-      <Cart />
+      <Cart products={products} cart={cart} setCart={setCart} />
+      <h2 className={checkoutStyles.totalPrice}>Total: ${totalPrice}</h2>
     </div>
     <Footer />
   </>
