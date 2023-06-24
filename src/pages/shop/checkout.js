@@ -161,6 +161,22 @@ export default function Checkout() {
       <h1>Checkout</h1>
       <Cart products={products} cart={cart} setCart={setCart} />
       <h2 className={checkoutStyles.totalPrice}>Total: ${totalPrice}</h2>
+      <div className={checkoutStyles.userInfoContainer}>
+        <div className={checkoutStyles.userInfo}>
+          <div className={checkoutStyles.userInfoData}>
+            <label>Name</label>
+            <input/>
+          </div>
+          <div className={checkoutStyles.userInfoData}>
+            <label>Email</label>
+            <input type={"email"} />
+          </div>
+          <div className={checkoutStyles.userInfoData}>
+            <label>Phone Number</label>
+            <input type={"tel"}/>
+          </div>
+        </div>
+      </div>
     </div>
     <Footer />
   </>

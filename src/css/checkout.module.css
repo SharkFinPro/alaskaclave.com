@@ -113,6 +113,44 @@
   font-family: MuseoSans, serif;
   font-size: 2rem;
   padding-block: 1rem;
+  background: #dcdcdc;
+  max-width: 1000px;
+  margin-inline: auto;
+  border-top: 1px solid #030006;
+}
+
+.userInfoContainer {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.userInfo {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  background: #dcdcdc;
+  padding-block: 2rem;
+  border: 2px solid #030006;
+}
+
+.userInfoData {
+  display: grid;
+  gap: 0.25rem;
+  width: 80%;
+  max-width: 600px;
+}
+
+.userInfoData > label {
+  font-family: MuseoSlab, sans-serif;
+  font-size: 1.25rem;
+}
+
+.userInfoData > input {
+  height: 2rem;
+  border: 2px solid #030006;
+  border-radius: 0.5em;
+  font-family: MuseoSans, serif;
+  font-size: 1rem;
 }
 
 @media (min-width: 800px) {
