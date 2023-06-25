@@ -144,6 +144,11 @@ export default function Checkout() {
   }, [cart]);
 
   let orderSubmitted = false;
+  function failSubmit(message) {
+    alert(message);
+    orderSubmitted = false;
+  }
+
   async function submit() {
     if (orderSubmitted) {
       return;
@@ -152,27 +157,27 @@ export default function Checkout() {
     orderSubmitted = true;
 
     if (!name) {
-      alert("Please enter your name!");
+      failSubmit("Please enter your name!");
       return;
     }
 
     if (!email) {
-      alert("Please enter your email!");
+      failSubmit("Please enter your email!");
       return;
     }
 
     if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-      alert("Please enter a valid email address!");
+      failSubmit("Please enter a valid email address!");
       return;
     }
 
     if (!phone) {
-      alert("Please enter your phone number!");
+      failSubmit("Please enter your phone number!");
       return;
     }
 
     if (!/^\d{10}$/.test(phone)) {
-      alert("Please enter a valid 10-digit phone number!");
+      failSubmit("Please enter a valid 10-digit phone number!");
       return;
     }
 
@@ -189,8 +194,7 @@ export default function Checkout() {
     });
 
     if (response.status !== 200) {
-      alert("Error submitting order!");
-      orderSubmitted = false;
+      failSubmit("Error submitting order!");
     } else {
       localStorage.setItem("cart", JSON.stringify({}));
       await navigate("/shop");
