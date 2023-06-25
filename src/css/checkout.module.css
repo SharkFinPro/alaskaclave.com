@@ -1,0 +1,188 @@
+.container {
+  background: #D6CEBD;
+  padding-bottom: 1rem;
+}
+
+.container * {
+  margin: 0;
+}
+
+.container > h1 {
+  background: #0B4662;
+  font-family: MuseoSlab, sans-serif;
+  font-size: 4rem;
+  color: #FFFFFF;
+  min-height: 200px;
+  display: grid;
+  place-content: center;
+}
+
+.cart {
+  display: grid;
+  max-width: 1000px;
+  margin-inline: auto;
+  background: #030006;
+  gap: 1px;
+}
+
+.cartItem {
+  background: #dcdcdc;
+  display: flex;
+  align-items: center;
+}
+
+.cartItemImage {
+  width: 200px;
+  aspect-ratio: 4/3;
+}
+
+.cartItemName {
+  font-size: 2rem;
+  font-family: MuseoSlab, sans-serif;
+  padding: 1rem;
+}
+
+.cartItemSize {
+  background: #030006;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-family: MuseoSans, serif;
+  width: 40px;
+  border-radius: 0.25em;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-content: center;
+}
+
+.cartItemTotal {
+  font-family: MuseoSans, serif;
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+
+.cartItemCount {
+  font-family: MuseoSans, serif;
+  font-size: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cartItemCountAmount {
+  display: grid;
+  justify-items: center;
+}
+
+.cartItemCountInteractable {
+  display: flex;
+}
+
+.cartItemCountInteractable > * {
+  background: #FFFFFF;
+  border: 2px solid black;
+  width: 50px;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-content: center;
+}
+
+.cartItemCountInteractable > button {
+  font-size: 1.75rem;
+  background: #650812;
+  color: #FFFFFF;
+  transition: 0.25s;
+}
+
+.cartItemCountInteractable > button:hover {
+  font-size: 1.75rem;
+  background: #E31837;
+}
+
+.cartItemCountInteractable > span {
+  border-left: none;
+  border-right: none;
+}
+
+.totalPrice {
+  text-align: center;
+  font-family: MuseoSans, serif;
+  font-size: 2rem;
+  padding-block: 1rem;
+  background: #dcdcdc;
+  max-width: 1000px;
+  margin-inline: auto;
+  border-top: 1px solid #030006;
+}
+
+.userInfo {
+  max-width: 1000px;
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  background: #dcdcdc;
+  padding-block: 2rem;
+  border-block: 2px solid #030006;
+}
+
+.userInfoData {
+  display: grid;
+  gap: 0.25rem;
+  width: 80%;
+  max-width: 600px;
+}
+
+.userInfoData > label {
+  font-family: MuseoSlab, sans-serif;
+  font-size: 1.25rem;
+}
+
+.userInfoData > input {
+  height: 2rem;
+  border: 2px solid #030006;
+  border-radius: 0.5em;
+  font-family: MuseoSans, serif;
+  font-size: 1rem;
+}
+
+.submitContainer {
+  display: grid;
+  place-items: center;
+  margin: 1rem;
+}
+
+.submit {
+  font-family: MuseoSans, serif;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  padding: 0.5em 3em;
+  border: 4px solid #030006;
+  border-radius: 0.5em;
+  background: #650812;
+  transition: 0.25s;
+}
+
+.submit:hover {
+  background: #e31837;
+}
+
+@media (min-width: 800px) {
+  .cartItemCount {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .container > h1 {
+    font-size: 3rem;
+  }
+
+  .cartItem {
+    flex-direction: column;
+  }
+
+  .cartItemCount {
+    flex-direction: column;
+  }
+}
