@@ -11,10 +11,10 @@ export default function DaysUntil() {
     <section className={daysUntilStyles.container}>
       <div className={daysUntilStyles.daysUntil}>
         <div className={daysUntilStyles.daysCounter}>
-          <h1>{~~(daysBetween / 10)}</h1>
-          <h1>{~~(daysBetween % 10)}</h1>
+          <p>{~~(daysBetween / 10)}</p>
+          <p>{~~(daysBetween % 10)}</p>
         </div>
-        <h1>Days until Conclave!</h1>
+        <p>Days until Conclave!</p>
         <a href={"https://registration.oa-bsa.org/Event/1198"} target={"_blank"} rel={"external"} className={daysUntilStyles.registerButton}>Register!</a>
       </div>
     </section>
