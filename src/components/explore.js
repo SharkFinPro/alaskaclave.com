@@ -26,7 +26,7 @@ export default function Explore() {
       <section className={exploreStyle.container}>
         {pageDescriptions.map(({ node }) => (
           <div className={exploreStyle.card} key={node.page}>
-            <h1>{node.page}</h1>
+            <h5>{node.page}</h5>
             <p>{node.homepageDescription?.homepageDescription}</p>
             <Link className={exploreStyle.btn} to={`/${node.page.toLowerCase()}`}>Learn More</Link>
           </div>
