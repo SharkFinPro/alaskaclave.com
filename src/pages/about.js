@@ -19,7 +19,7 @@ export default function Activities() {
             node.url ? <h5 className={aboutStyles.structureEntryTitle}>
                 <a target={"__blank"} href={node.url}>{node.name} <span>🔗</span></a>
               </h5>
-            : <h5 className={aboutStyles.structureEntryTitle}>{node.name}</h5>
+              : <h5 className={aboutStyles.structureEntryTitle}>{node.name}</h5>
             }
             <p>{node.description?.description}</p>
           </div>
