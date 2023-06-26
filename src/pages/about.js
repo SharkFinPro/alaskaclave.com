@@ -10,14 +10,16 @@ export default function Activities() {
 
   return (
     <InfoPage title={"About"} description={"The weekend"}>
-      <h1 className={aboutStyles.structureTitle}>Structure</h1>
+      <h3 className={aboutStyles.structureTitle}>Structure</h3>
       <div className={aboutStyles.structure}>
         {structureEntries.map(({ node }) => (
         <div key={node.id}>
           <div className={aboutStyles.structureEntryContent}>
             {
-            node.url ? <h2><a target={"__blank"} href={node.url}>{node.name} <span>🔗</span></a></h2>
-            : <h2>{node.name}</h2>
+            node.url ? <h5 className={aboutStyles.structureEntryTitle}>
+                <a target={"__blank"} href={node.url}>{node.name} <span>🔗</span></a>
+              </h5>
+              : <h5 className={aboutStyles.structureEntryTitle}>{node.name}</h5>
             }
             <p>{node.description?.description}</p>
           </div>

@@ -18,7 +18,7 @@
   column-gap: 2rem;
 }
 
-.daysCounter * {
+.daysCounter > p {
   font-size: min(12vw, 15rem);
   padding: 0.25em 0.5em;
   margin: 0;
@@ -29,7 +29,7 @@
   font-family: MuseoSlab, sans-serif;
 }
 
-.daysUntil > h1 {
+.daysUntil > p {
   font-size: min(4vw, 6rem);
   color: #FFFFFF;
   margin-block: 0.5em;

@@ -13,13 +13,15 @@ const activityTags = {
 function displayActivitySet(title, activities) {
   return (
     <div key={title}>
-      <h1 className={activitiesStyles.activitySetTitle}>{title}</h1>
+      <h3 className={activitiesStyles.activitySetTitle}>{title}</h3>
       <div className={activitiesStyles.activitySet}>
         {activities.map((activity) => (
           <div className={activitiesStyles.activity} key={activity.id}>
             {
-            activity.url ? <h2><a target={"__blank"} href={activity.url} rel={"external"}>{activity.name} <span>🔗</span></a></h2>
-            : <h2>{activity.name}</h2>
+            activity.url ? <h5 className={activitiesStyles.activityName}>
+                <a target={"__blank"} href={activity.url} rel={"external"}>{activity.name} <span>🔗</span></a>
+              </h5>
+              : <h5 className={activitiesStyles.activityName}>{activity.name}</h5>
             }
             <div className={activitiesStyles.activityTags}>
               {activity.tags?.map((tag) => <p className={activityTags[tag]} key={tag}>{tag}</p>)}

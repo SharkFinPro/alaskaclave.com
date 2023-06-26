@@ -44,7 +44,7 @@ function CartItem({ product, count, size, removeProduct, updateProductCount }) {
               alt={"Image not found"}
             />
       }
-      <h2 className={checkoutStyles.cartItemName}>{product.name}</h2>
+      <h5 className={checkoutStyles.cartItemName}>{product.name}</h5>
       {
         size ? <p className={checkoutStyles.cartItemSize}>{size}</p> : <></>
       }

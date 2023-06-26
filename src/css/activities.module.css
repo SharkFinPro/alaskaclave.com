@@ -25,23 +25,23 @@
   margin-block: 0.5em;
 }
 
-.activity h2 {
+.activityName {
   font-size: 2rem;
   margin-bottom: 0;
   font-family: MuseoSlab, sans-serif;
 }
 
-.activity h2 a {
+.activityName a {
   color: inherit;
   text-decoration: none;
   transition: 0.25s;
 }
 
-.activity h2 a:hover {
+.activityName a:hover {
   color: #650812;
 }
 
-.activity h2 a span {
+.activityName a span {
   font-size: 0.75em;
   color: transparent;
   text-shadow: 0 0 0 #650812;
@@ -90,7 +90,7 @@
 }
 
 @media (max-width: 800px) {
-  .activity h2 {
+  .activityName {
     font-size: 1.6rem;
   }
 

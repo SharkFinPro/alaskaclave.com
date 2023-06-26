@@ -39,10 +39,10 @@ function ProductCard({ node }) {
           : <StaticImage className={shopStyles.productCardImage} src={"../../static/images/NOT_FOUND.png"} alt={"Image not found"} />
       }
       <div className={shopStyles.productCardText}>
-        <h1 className={shopStyles.productCardName}>
+        <h5 className={shopStyles.productCardName}>
           <span>{node.name}</span>
           <span className={shopStyles.productCardPrice}>${node.price}</span>
-        </h1>
+        </h5>
         <p className={shopStyles.productCardDescription}>{node.description?.description}</p>
       </div>
       <div className={shopStyles.productCardCart}>
@@ -67,7 +67,7 @@ export default function Shop() {
 
   return (
     <InfoPage title={"Shop"} description={"Preorder items from the Trading Post!"}>
-      <h1 className={shopStyles.productsDisplayTitle}>Products</h1>
+      <h3 className={shopStyles.productsDisplayTitle}>Products</h3>
       <div className={shopStyles.productsDisplay}>
         {products.map(({ node }) => (
           <ProductCard node={node} key={node.name} />
