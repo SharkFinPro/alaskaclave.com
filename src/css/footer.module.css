@@ -4,6 +4,10 @@
   grid-column: 1/-1;
 }
 
+.wrapper * {
+  margin: 0;
+}
+
 .container {
   width: 90%;
   margin-inline: auto;
@@ -12,10 +16,10 @@
 .content {
   font-size: min(max(1vw, 0.75rem), 1.75rem);
   text-align: center;
-  padding: 3em 0;
+  padding-block: 3em;
 }
 
-.content h1 {
+.content h5 {
   font-size: 1.5em;
   font-family: MuseoSlab, sans-serif;
 }
@@ -23,6 +27,7 @@
 .content p {
   font-size: 1.1em;
   font-family: MuseoSans, serif;
+  padding-block: 0.5em;
 }
 
 .content p a {
@@ -34,6 +39,7 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
+  padding-block: 0.5em;
 }
 
 .icons > * {
