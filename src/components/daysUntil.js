@@ -1,5 +1,5 @@
 import React from "react";
-import * as daysUntilStyles from "../css/daysUntil.module.css";
+import * as daysUntilStyles from "@stylesheets/daysUntil.module.css";
 
 export default function DaysUntil() {
   const todaysDate = new Date();

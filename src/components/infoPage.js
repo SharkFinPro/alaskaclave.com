@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Footer from "./footer";
-import * as infoPageStyles from "../css/infoPage.module.css";
+import * as infoPageStyles from "@stylesheets/infoPage.module.css";
 
 export default function InfoPage({ title, description, children }) {
   const { allContentfulInfoPageData } = useStaticQuery(graphql`

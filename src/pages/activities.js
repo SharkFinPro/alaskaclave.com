@@ -3,7 +3,7 @@ import SEO from "../components/seo";
 import { GatsbyImage } from "gatsby-plugin-image";
 import useContentfulActivities from "../hooks/useContentfulActivities";
 import InfoPage from "../components/infoPage";
-import * as activitiesStyles from "../css/activities.module.css";
+import * as activitiesStyles from "@stylesheets/activities.module.css";
 
 const activityTagColors = {
   "Guided Tour": "#ffbc1f",

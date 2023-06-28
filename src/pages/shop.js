@@ -4,7 +4,7 @@ import InfoPage from "../components/infoPage";
 import { Link } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import useTradingPostProducts from "../hooks/useTradingPostProducts";
-import * as shopStyles from "../css/shop.module.css";
+import * as shopStyles from "@stylesheets/shop.module.css";
 
 function ProductCard({ node }) {
   const [selectedSize, selectSize] = useState(undefined);

@@ -3,7 +3,7 @@ import SEO from "../components/seo";
 import InfoPage from "../components/infoPage";
 import { GatsbyImage } from "gatsby-plugin-image";
 import useContentfulConclaveStructureEntries from "../hooks/useContentfulConclaveStructureEntries";
-import * as aboutStyles from "../css/about.module.css";
+import * as aboutStyles from "@stylesheets/about.module.css";
 
 export default function Activities() {
   const structureEntries = useContentfulConclaveStructureEntries();

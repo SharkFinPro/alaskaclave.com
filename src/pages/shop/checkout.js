@@ -4,7 +4,7 @@ import Footer from "../../components/footer";
 import { navigate } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import useTradingPostProducts from "../../hooks/useTradingPostProducts";
-import * as checkoutStyles from "../../css/checkout.module.css";
+import * as checkoutStyles from "@stylesheets/checkout.module.css";
 
 function CartItem({ product, count, size, removeProduct, updateProductCount }) {
   const [currentCount, setCurrentCount] = useState(count);
