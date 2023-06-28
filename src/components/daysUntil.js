@@ -15,7 +15,7 @@ export default function DaysUntil() {
           <p>{~~(daysBetween % 10)}</p>
         </div>
         <p>Days until Conclave!</p>
-        <a href={"https://registration.oa-bsa.org/Event/1198"} target={"_blank"} rel={"external"} className={daysUntilStyles.registerButton}>Register!</a>
+        <a href={"https://registration.oa-bsa.org/Event/1198"} target={"__blank"} rel={"external"} className={daysUntilStyles.registerButton}>Register!</a>
       </div>
     </section>
   );
