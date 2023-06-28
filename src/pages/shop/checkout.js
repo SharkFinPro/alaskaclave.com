@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import SEO from "../../components/seo";
-import Footer from "../../components/footer";
+import SEO from "@components/seo";
+import Footer from "@components/footer";
 import { navigate } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import useTradingPostProducts from "../../hooks/useTradingPostProducts";

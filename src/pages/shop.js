@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SEO from "../components/seo";
-import InfoPage from "../components/infoPage";
+import SEO from "@components/seo";
+import InfoPage from "@components/infoPage";
 import { Link } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import useTradingPostProducts from "../hooks/useTradingPostProducts";
