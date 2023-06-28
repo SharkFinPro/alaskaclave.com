@@ -1,4 +1,3 @@
-import React from "react";
 import * as daysUntilStyles from "../css/daysUntil.module.css";
 
 export default function DaysUntil() {
