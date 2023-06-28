@@ -5,7 +5,7 @@ import DaysUntil from "../components/daysUntil";
 import Explore from "../components/explore";
 import Footer from "../components/footer";
 import "../css/global.css";
-import * as indexStyles from "@stylesheets/index.module.css";
+import * as indexStyles from "../css/index.module.css";
 
 const Index = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import * as footerStyle from "@stylesheets/footer.module.css";
+import * as footerStyle from "../css/footer.module.css";
 import { StaticImage } from "gatsby-plugin-image";
 
 export default function Footer() {

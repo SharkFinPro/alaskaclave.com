@@ -1,5 +1,5 @@
 import React from "react";
-import * as exploreStyle from "@stylesheets/explore.module.css";
+import * as exploreStyle from "../css/explore.module.css";
 import { graphql, Link, useStaticQuery } from "gatsby";
 
 export default function Explore() {
