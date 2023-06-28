@@ -5,9 +5,11 @@ import useContentfulActivities from "../hooks/useContentfulActivities";
 import InfoPage from "../components/infoPage";
 import * as activitiesStyles from "../css/activities.module.css";
 
-const activityTags = {
-  "Guided Tour": activitiesStyles.activityTagGuidedTour,
-  "Museum": activitiesStyles.activityTagMuseum
+const activityTagColors = {
+  "Guided Tour": "#ffbc1f",
+  "Museum": "#3ec228",
+  "Interactive Activity": "#00bfff",
+  "Staff Pick": "#b56af6"
 };
 
 function displayActivitySet(title, activities) {
@@ -24,7 +26,9 @@ function displayActivitySet(title, activities) {
               : <h5 className={activitiesStyles.activityName}>{activity.name}</h5>
             }
             <div className={activitiesStyles.activityTags}>
-              {activity.tags?.map((tag) => <p className={activityTags[tag]} key={tag}>{tag}</p>)}
+              {activity.tags?.map((tag) => (
+                <p style={{ backgroundColor: activityTagColors[tag] }} key={tag}>{tag}</p>
+              ))}
             </div>
             <div className={activitiesStyles.activityContent}>
               <p>{activity.description?.description}</p>

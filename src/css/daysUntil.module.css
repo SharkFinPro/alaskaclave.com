@@ -19,7 +19,7 @@
 }
 
 .daysCounter > p {
-  font-size: min(12vw, 15rem);
+  font-size: min(20vw, 15rem);
   padding: 0.25em 0.5em;
   margin: 0;
   display: grid;
@@ -30,7 +30,7 @@
 }
 
 .daysUntil > p {
-  font-size: min(4vw, 6rem);
+  font-size: min(7vw, 5rem);
   color: #FFFFFF;
   margin-block: 0.5em;
   font-family: MuseoSlab, sans-serif;

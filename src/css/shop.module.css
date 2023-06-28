@@ -108,7 +108,8 @@
   transition: 0.25s;
 }
 
-.productCardCart > button:enabled:hover {
+.productCardCart > button:enabled:active {
+  transform: scale(1.1);
   background: #E31837;
 }
 
@@ -131,4 +132,10 @@
 
 .checkoutButton a:hover {
   background: #E31837;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .productCardCart > button:enabled:hover {
+    background: #E31837;
+  }
 }

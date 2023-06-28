@@ -9,19 +9,19 @@
   margin-left: 2rem;
 }
 
-.activitySet > * {
+.activity {
   padding: 1em;
   background: #dcdcdc;
   border-radius: 1.5rem;
   transition: 0.5s;
 }
 
-.activitySet > *:hover {
+.activity:hover {
   margin-left: 1em;
   padding-right: 0;
 }
 
-.activitySet * {
+.activity {
   margin-block: 0.5em;
 }
 
@@ -60,14 +60,6 @@
   padding: 0.3em 1em;
   border-radius: 1rem;
   opacity: 85%;
-}
-
-.activityTagGuidedTour {
-  background-color: #ffbc1f;
-}
-
-.activityTagMuseum {
-  background-color: #3ec228;
 }
 
 .activityContent {
