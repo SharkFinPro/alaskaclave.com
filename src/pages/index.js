@@ -1,9 +1,9 @@
 import React from "react";
-import SEO from "@components/seo";
+import SEO from "../components/seo";
 import { StaticImage } from "gatsby-plugin-image";
-import DaysUntil from "@components/daysUntil";
-import Explore from "@components/explore";
-import Footer from "@components/footer";
+import DaysUntil from "../components/daysUntil";
+import Explore from "../components/explore";
+import Footer from "../components/footer";
 import "../css/global.css";
 import * as indexStyles from "@stylesheets/index.module.css";
 
