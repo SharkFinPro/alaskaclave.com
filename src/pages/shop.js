@@ -28,7 +28,6 @@ function ProductCard({ node }) {
     }
 
     localStorage.setItem("cart", JSON.stringify(currentCart));
-    window.location.reload();
   }
 
   return (
