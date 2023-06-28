@@ -8,6 +8,8 @@ import * as shopStyles from "../css/shop.module.css";
 
 function ProductCard({ node }) {
   const [selectedSize, selectSize] = useState(undefined);
+  const [addToCartText, setAddToCartText] = useState("Add to Cart");
+  const [addToCartEnabled, setAddToCartEnabled] = useState(true);
 
   function addToCart() {
     let currentCart = JSON.parse(localStorage.getItem("cart"));
@@ -28,6 +30,13 @@ function ProductCard({ node }) {
     }
 
     localStorage.setItem("cart", JSON.stringify(currentCart));
+    setAddToCartText("Added!");
+    setAddToCartEnabled(false);
+    selectSize(undefined);
+    setTimeout(() => {
+      setAddToCartText("Add to Cart");
+      setAddToCartEnabled(true);
+    }, 1000);
   }
 
   return (
@@ -55,7 +64,7 @@ function ProductCard({ node }) {
             </button>
           ))}
         </p>
-        <button disabled={!selectedSize && node.sizes} onClick={addToCart}>Add to Cart</button>
+        <button disabled={(!selectedSize && node.sizes) || !addToCartEnabled} onClick={addToCart}>{addToCartText}</button>
       </div>
     </div>
   );
