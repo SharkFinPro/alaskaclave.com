@@ -8,7 +8,8 @@ import * as activitiesStyles from "../css/activities.module.css";
 const activityTagColors = {
   "Guided Tour": "#ffbc1f",
   "Museum": "#3ec228",
-  "Interactive Activity": "#00bfff"
+  "Interactive Activity": "#00bfff",
+  "Staff Pick": "#b56af6"
 };
 
 function displayActivitySet(title, activities) {
