@@ -10,7 +10,8 @@ const useTradingPostProducts = () => {
             description {
               description
             }
-            price
+            price,
+            salePrice,
             image {
               gatsbyImageData
             }

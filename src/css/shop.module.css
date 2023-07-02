@@ -54,6 +54,31 @@
   grid-template-columns: 1fr auto;
 }
 
+.productCardSale {
+  display: grid;
+}
+
+.productCardSalePrice {
+  font-size: 1.5rem;
+  color: #030006;
+  position: relative;
+}
+
+.productCardSalePrice::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 45%;
+  right: 0;
+  border-top: 4px solid;
+  border-color: #e31837;
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -o-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+}
+
 .productCardPrice {
   font-size: 1.75rem;
   color: #650812;

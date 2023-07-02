@@ -49,7 +49,11 @@ function ProductCard({ node }) {
       <div className={shopStyles.productCardText}>
         <h5 className={shopStyles.productCardName}>
           <span>{node.name}</span>
-          <span className={shopStyles.productCardPrice}>${node.price}</span>
+          {node.salePrice ? <span className={shopStyles.productCardSale}>
+              <span className={shopStyles.productCardSalePrice}>{node.price ? `$${node.price}` : ""}</span>
+              <span className={shopStyles.productCardPrice}> ${node.salePrice}</span>
+            </span> :
+            <span className={shopStyles.productCardPrice}>${node.price}</span>}
         </h5>
         <p className={shopStyles.productCardDescription}>{node.description?.description}</p>
       </div>
