@@ -49,7 +49,7 @@ function CartItem({ product, count, size, removeProduct, updateProductCount }) {
         size ? <p className={checkoutStyles.cartItemSize}>{size}</p> : <></>
       }
       <div className={checkoutStyles.cartItemCount}>
-        <p>Total: ${currentCount * product.price}</p>
+        <p>Total: ${currentCount * (product.salePrice || product.price)}</p>
         <div className={checkoutStyles.cartItemCountAmount}>
           <p>Amount</p>
           <p className={checkoutStyles.cartItemCountInteractable}>
@@ -127,11 +127,14 @@ export default function Checkout() {
   function updateTotalPrice() {
     let total = 0;
     for (let item in cart) {
+      const { node } = products.find((p) => p.node.name === item);
+      const price = node.salePrice || node.price;
+
       if (typeof cart[item] === "number") {
-        total += cart[item] * products.find((p) => p.node.name === item).node.price;
+        total += cart[item] * price;
       } else {
         for (let itemSize in cart[item]) {
-          total += cart[item][itemSize] * products.find((p) => p.node.name === item).node.price;
+          total += cart[item][itemSize] * price;
         }
       }
     }
