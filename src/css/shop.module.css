@@ -1,6 +1,6 @@
 .productsDisplayTitle {
   text-align: center;
-  font-family: "Museo Slab 500", serif;
+  font-family: MuseoSlab, sans-serif;
   font-size: 3rem;
   margin: 0;
   padding-top: 1em;
@@ -46,7 +46,7 @@
 
 .productCardName {
   text-align: center;
-  font-family: "Museo Slab 500", serif;
+  font-family: MuseoSlab, sans-serif;
   font-size: 1.5rem;
   padding-block: 0.5em;
   display: grid;
@@ -84,7 +84,7 @@
 }
 
 .productCardDescription {
-  font-family: "Museo Sans 500", sans-serif;
+  font-family: MuseoSans, serif;
   font-size: 1rem;
   padding-bottom: 0.5em;
 }
@@ -109,7 +109,7 @@
   width: 30px;
   aspect-ratio: 1 / 1;
   border-radius: 0.25em;
-  font-family: "Museo Sans 500", sans-serif;
+  font-family: MuseoSans, serif;
   font-size: 0.9rem;
   display: grid;
   place-content: center;
@@ -123,7 +123,7 @@
 
 .productCardCart > button {
   font-size: 1rem;
-  font-family: "Museo Slab 500", serif;
+  font-family: MuseoSlab, sans-serif;
   padding-block: 0.5em;
   width: 60%;
   border: 2px solid #030006;
