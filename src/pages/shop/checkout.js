@@ -179,7 +179,11 @@ export default function Checkout() {
       return;
     }
 
-    if (!/^\d{10}$/.test(phone)) {
+    let phoneNumber = phone.toString();
+    phoneNumber = phoneNumber.split("-").join("");
+    phoneNumber = phoneNumber.split(" ").join("");
+
+    if (!/^\d{10}$/.test(phoneNumber)) {
       failSubmit("Please enter a valid 10-digit phone number!");
       return;
     }
@@ -192,7 +196,7 @@ export default function Checkout() {
     const payload = {
       name,
       email,
-      phone,
+      phone: phoneNumber,
       cart,
       prices
     };
