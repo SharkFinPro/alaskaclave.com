@@ -9,11 +9,10 @@
 
 .productsDisplay {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, min(300px, 100%));
   justify-content: center;
   grid-auto-rows: 1fr;
   gap: 1rem;
-  padding-inline: 2rem;
 }
 
 .productCard {
