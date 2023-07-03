@@ -184,12 +184,19 @@ export default function Checkout() {
       return;
     }
 
+    let prices = {};
+    for (let { node } of products) {
+      prices[node.name] = node.salePrice || node.price;
+    }
+
     const payload = {
       name,
       email,
       phone,
-      cart
+      cart,
+      prices
     };
+
     const response = await fetch("/api/preorder", {
       method: "POST",
       mode: "same-origin",
