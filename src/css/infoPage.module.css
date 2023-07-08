@@ -25,8 +25,7 @@
 }
 
 .intro {
-  display: grid;
-  place-items: center;
+  text-align: center;
   background: #dcdcdc;
   border: none;
   border-radius: 0.5rem;
@@ -44,6 +43,7 @@
   font-size: 1.15rem;
   line-height: 1.5em;
   font-family: MuseoSans, serif;
+  text-wrap: balance;
 }
 
 @media (max-width: 800px) {
