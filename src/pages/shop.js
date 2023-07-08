@@ -5,6 +5,7 @@ import { Link } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import useTradingPostProducts from "../hooks/useTradingPostProducts";
 import * as shopStyles from "../css/shop.module.css";
+import { localStorageTimer, timeStampLocalStorage } from "../components/localStorageTimer";
 
 function ProductCard({ node }) {
   const [selectedSize, selectSize] = useState(undefined);
@@ -30,6 +31,7 @@ function ProductCard({ node }) {
     }
 
     localStorage.setItem("cart", JSON.stringify(currentCart));
+    timeStampLocalStorage();
     setAddToCartText("Added!");
     setAddToCartEnabled(false);
     selectSize(undefined);
@@ -76,6 +78,7 @@ function ProductCard({ node }) {
 
 export default function Shop() {
   const products = useTradingPostProducts();
+  localStorageTimer();
 
   return (
     <InfoPage title={"Shop"} description={"Preorder items from the Trading Post!"}>

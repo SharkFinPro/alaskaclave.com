@@ -5,6 +5,7 @@ import { navigate } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import useTradingPostProducts from "../../hooks/useTradingPostProducts";
 import * as checkoutStyles from "../../css/checkout.module.css";
+import { localStorageTimer, timeStampLocalStorage } from "../../components/localStorageTimer";
 
 function CartItem({ product, count, size, removeProduct, updateProductCount }) {
   const [currentCount, setCurrentCount] = useState(count);
@@ -87,6 +88,7 @@ function Cart({ products, cart, setCart }) {
     }
 
     localStorage.setItem("cart", JSON.stringify(currentCart));
+    timeStampLocalStorage();
     updateCart();
   }
 
@@ -123,6 +125,7 @@ export default function Checkout() {
   const [phone, setPhone] = useState();
 
   const products = useTradingPostProducts();
+  localStorageTimer();
 
   function updateTotalPrice() {
     let total = 0;
@@ -211,6 +214,7 @@ export default function Checkout() {
       failSubmit("Error submitting order!");
     } else {
       localStorage.setItem("cart", JSON.stringify({}));
+      timeStampLocalStorage();
       await navigate("/shop");
     }
   }
