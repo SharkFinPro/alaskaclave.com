@@ -1,6 +1,10 @@
 const EXPIRATION_SECONDS = 14400; // 2 Hours
 
 export function localStorageTimer() {
+  if (typeof window === "undefined") {
+    return;
+  }
+
   const lastUpdated = localStorage.getItem("lastUpdated");
   if (!lastUpdated) {
     localStorage.clear();
@@ -15,5 +19,9 @@ export function localStorageTimer() {
 }
 
 export function timeStampLocalStorage() {
+  if (typeof window === "undefined") {
+    return;
+  }
+  
   localStorage.setItem("lastUpdated", JSON.stringify(new Date()));
 }
