@@ -5,6 +5,7 @@ import { navigate } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import useTradingPostProducts from "../../hooks/useTradingPostProducts";
 import * as checkoutStyles from "../../css/checkout.module.css";
+import { localStorageTimer, timeStampLocalStorage } from "../../components/localStorageTimer";
 
 function CartItem({ product, count, size, removeProduct, updateProductCount }) {
   const [currentCount, setCurrentCount] = useState(count);
@@ -49,7 +50,7 @@ function CartItem({ product, count, size, removeProduct, updateProductCount }) {
         size ? <p className={checkoutStyles.cartItemSize}>{size}</p> : <></>
       }
       <div className={checkoutStyles.cartItemCount}>
-        <p>Total: ${currentCount * product.price}</p>
+        <p>Total: ${currentCount * (product.salePrice || product.price)}</p>
         <div className={checkoutStyles.cartItemCountAmount}>
           <p>Amount</p>
           <p className={checkoutStyles.cartItemCountInteractable}>
@@ -87,6 +88,7 @@ function Cart({ products, cart, setCart }) {
     }
 
     localStorage.setItem("cart", JSON.stringify(currentCart));
+    timeStampLocalStorage();
     updateCart();
   }
 
@@ -123,15 +125,19 @@ export default function Checkout() {
   const [phone, setPhone] = useState();
 
   const products = useTradingPostProducts();
+  localStorageTimer();
 
   function updateTotalPrice() {
     let total = 0;
     for (let item in cart) {
+      const { node } = products.find((p) => p.node.name === item);
+      const price = node.salePrice || node.price;
+
       if (typeof cart[item] === "number") {
-        total += cart[item] * products.find((p) => p.node.name === item).node.price;
+        total += cart[item] * price;
       } else {
         for (let itemSize in cart[item]) {
-          total += cart[item][itemSize] * products.find((p) => p.node.name === item).node.price;
+          total += cart[item][itemSize] * price;
         }
       }
     }
@@ -176,17 +182,28 @@ export default function Checkout() {
       return;
     }
 
-    if (!/^\d{10}$/.test(phone)) {
+    let phoneNumber = phone.toString();
+    phoneNumber = phoneNumber.split("-").join("");
+    phoneNumber = phoneNumber.split(" ").join("");
+
+    if (!/^\d{10}$/.test(phoneNumber)) {
       failSubmit("Please enter a valid 10-digit phone number!");
       return;
+    }
+
+    let prices = {};
+    for (let { node } of products) {
+      prices[node.name] = node.salePrice || node.price;
     }
 
     const payload = {
       name,
       email,
-      phone,
-      cart
+      phone: phoneNumber,
+      cart,
+      prices
     };
+
     const response = await fetch("/api/preorder", {
       method: "POST",
       mode: "same-origin",
@@ -197,6 +214,7 @@ export default function Checkout() {
       failSubmit("Error submitting order!");
     } else {
       localStorage.setItem("cart", JSON.stringify({}));
+      timeStampLocalStorage();
       await navigate("/shop");
     }
   }

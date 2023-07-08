@@ -68,7 +68,8 @@ export default async function handler(req, res) {
       name: body.name,
       email: body.email,
       phone: body.phone,
-      cart: shookCart
+      cart: shookCart,
+      prices: body.prices
     });
   } catch (error) {
     console.log(error);

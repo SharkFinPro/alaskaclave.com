@@ -5,6 +5,7 @@ import { Link } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import useTradingPostProducts from "../hooks/useTradingPostProducts";
 import * as shopStyles from "../css/shop.module.css";
+import { localStorageTimer, timeStampLocalStorage } from "../components/localStorageTimer";
 
 function ProductCard({ node }) {
   const [selectedSize, selectSize] = useState(undefined);
@@ -30,6 +31,7 @@ function ProductCard({ node }) {
     }
 
     localStorage.setItem("cart", JSON.stringify(currentCart));
+    timeStampLocalStorage();
     setAddToCartText("Added!");
     setAddToCartEnabled(false);
     selectSize(undefined);
@@ -49,7 +51,11 @@ function ProductCard({ node }) {
       <div className={shopStyles.productCardText}>
         <h5 className={shopStyles.productCardName}>
           <span>{node.name}</span>
-          <span className={shopStyles.productCardPrice}>${node.price}</span>
+          {node.salePrice ? <span className={shopStyles.productCardSale}>
+              <span className={shopStyles.productCardSalePrice}>{node.price ? `$${node.price}` : ""}</span>
+              <span className={shopStyles.productCardPrice}> ${node.salePrice}</span>
+            </span> :
+            <span className={shopStyles.productCardPrice}>${node.price}</span>}
         </h5>
         <p className={shopStyles.productCardDescription}>{node.description?.description}</p>
       </div>
@@ -72,6 +78,7 @@ function ProductCard({ node }) {
 
 export default function Shop() {
   const products = useTradingPostProducts();
+  localStorageTimer();
 
   return (
     <InfoPage title={"Shop"} description={"Preorder items from the Trading Post!"}>
