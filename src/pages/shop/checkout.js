@@ -124,6 +124,8 @@ export default function Checkout() {
   const [email, setEmail] = useState();
   const [phone, setPhone] = useState();
 
+  const [submitButtonText, setSubmitButtonText] = useState("Submit");
+
   const products = useTradingPostProducts();
   localStorageTimer();
 
@@ -153,12 +155,15 @@ export default function Checkout() {
   function failSubmit(message) {
     alert(message);
     orderSubmitted = false;
+    setSubmitButtonText("Submit");
   }
 
   async function submit() {
     if (orderSubmitted) {
       return;
     }
+
+    setSubmitButtonText("Please Wait...");
 
     orderSubmitted = true;
 
@@ -250,7 +255,7 @@ export default function Checkout() {
         <button
           className={checkoutStyles.submit}
           onClick={submit}>
-          Submit
+          {submitButtonText}
         </button>
       </div>
     </div>
