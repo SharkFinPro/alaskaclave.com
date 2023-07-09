@@ -23,7 +23,7 @@ const SEO = ({ title, description, pathname, children }) => {
       }
     }
   `);
-  const pageDescription = allContentfulInfoPageData.edges.find(({ node }) => node.page === title)?.node?.introContent?.introContent;
+  const pageDescription = allContentfulInfoPageData.edges.find(({ node }) => node.page === title)?.node?.homepageDescription?.homepageDescription;
 
   const { title: defaultTitle, description: defaultDescription, image, siteUrl, twitterUsername } = useSiteMetadata();
 
