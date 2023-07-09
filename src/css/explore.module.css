@@ -43,7 +43,7 @@
   text-decoration: none;
   padding: 1em 2em;
   margin-inline: auto;
-  font-family: "Museo Slab 500", serif;
+  font-family: MuseoSlab, sans-serif;
   border-radius: 0.5rem;
   background: #650812;
   transition: 0.25s;
