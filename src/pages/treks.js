@@ -1,26 +1,26 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import SEO from "../components/seo";
 import InfoPage from "../components/infoPage";
 import { StaticImage } from "gatsby-plugin-image";
 import * as trekStyles from "../css/treks.module.css";
+import useTreks from "../hooks/useTreks";
 
-function Trek() {
+function Trek({ name, price, activities }) {
   return (
     <div className={trekStyles.trek}>
-      <h5 className={trekStyles.trekName}>Alaskan Nature<span className={trekStyles.trekPrice}>$37</span></h5>
+      <h5 className={trekStyles.trekName}>{name}<span className={trekStyles.trekPrice}>${price}</span></h5>
       <div className={trekStyles.trekContent}>
         <ul className={trekStyles.trekActivities}>
-          <li>
-            <a
-              href={"/activities#Museum of the North"}
-              target={"__blank"}>
-              Museum of the North
-              <span>🔗</span>
-            </a>
-          </li>
-          <li>Large Animal Research Station</li>
-          <li>Creamer's Field Wildlife Refuge</li>
-          <li>Alaska Songbird Institute</li>
+          {activities.map((activity) => (
+            <li>
+              <a
+                href={`/activities#${activity}`}
+                target={"__blank"}>
+                {activity}
+                <span>🔗</span>
+              </a>
+            </li>
+          ))}
         </ul>
         <StaticImage className={trekStyles.trekImage} src={"../../static/images/logoGray_512.png"} alt={"logo"} placeholder={"blurred"} />
       </div>
@@ -31,6 +31,16 @@ function Trek() {
 export default function Treks() {
   const [site, setSite] = useState("camp");
   const [treks, setTreks] = useState([]);
+
+  const trekList = useTreks();
+
+  useEffect(() => {
+    if (site === "camp") {
+      setTreks(trekList.filter(({ node }) => node.inCamp));
+    } else if (site === "fairbanks") {
+      setTreks(trekList.filter(({ node }) => !node.inCamp));
+    }
+  }, [site])
 
   return (
     <InfoPage title={"Treks"} description={"Carefully selected activities"}>
@@ -48,11 +58,14 @@ export default function Treks() {
         </button>
       </div>
       <div className={trekStyles.treks}>
-        <Trek />
-        <Trek />
-        <Trek />
-        <Trek />
-        <Trek />
+        {treks.map(({ node }) => (
+          <Trek
+            name={node.name}
+            price={node.price}
+            activities={node.activities}
+            key={node.name}
+          />
+        ))}
       </div>
     </InfoPage>
   );
