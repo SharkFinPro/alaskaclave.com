@@ -29,12 +29,9 @@ h3 {
 }
 
 .treks {
-  display: flex;
-  flex-flow: row wrap;
-  place-content: center;
+  display: grid;
+  grid-auto-rows: 1fr;
   gap: 1rem;
-  max-width: 1400px;
-  margin-inline: auto;
 }
 
 .treks * {
@@ -43,18 +40,21 @@ h3 {
 }
 
 .trek {
-  padding: 2rem;
+  padding: 1rem;
   background: #dcdcdc;
   border: 5px solid #650812;
   border-radius: 0.5em;
-  width: 100%;
-  max-width: 600px;
+  max-width: 800px;
+  margin-inline: auto;
 }
 
 .trekName {
   font-family: MuseoSlab, sans-serif;
   font-size: 1.5rem;
-  padding: 1em;
+  padding-block: 1em;
+  text-align: center;
+  max-width: 500px;
+  margin-inline: auto;
 }
 
 .trekPrice {
@@ -64,22 +64,24 @@ h3 {
 
 .trekContent {
   display: grid;
-  grid-template-columns: 70% auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
-.trekImage {
-  display: grid;
+.trekDescription {
+  font-family: MuseoSans, serif;
+  font-size: 1rem;
+  padding-inline: 1em;
 }
 
 .trekActivities {
   font-family: MuseoSans, serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding-left: 1em;
-  padding-block: 1em;
-}
-
-.trekActivities > li {
-  padding-block: 0.25em;
+  display: grid;
+  align-content: start;
+  gap: 0.5em;
+  list-style: inside square;
 }
 
 .trekActivities > li > a {
@@ -101,10 +103,5 @@ h3 {
 @media (max-width: 700px) {
   .trekContent {
     grid-template-columns: 1fr;
-  }
-
-  .trekImage {
-    max-width: 50%;
-    margin-inline: auto;
   }
 }

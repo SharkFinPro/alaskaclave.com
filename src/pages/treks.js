@@ -10,9 +10,10 @@ function Trek({ name, price, activities }) {
     <div className={trekStyles.trek}>
       <h5 className={trekStyles.trekName}>{name}<span className={trekStyles.trekPrice}>${price}</span></h5>
       <div className={trekStyles.trekContent}>
+        <p className={trekStyles.trekDescription}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam cum dolores earum facere, id illo minima nisi non porro quos tempora. A asperiores dignissimos labore molestiae quae rerum, tenetur.</p>
         <ul className={trekStyles.trekActivities}>
           {activities.map((activity) => (
-            <li>
+            <li key={activity}>
               <a
                 href={`/activities#${activity}`}
                 target={"__blank"}>
@@ -22,7 +23,6 @@ function Trek({ name, price, activities }) {
             </li>
           ))}
         </ul>
-        <StaticImage className={trekStyles.trekImage} src={"../../static/images/logoGray_512.png"} alt={"logo"} placeholder={"blurred"} />
       </div>
     </div>
   );
