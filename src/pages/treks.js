@@ -16,8 +16,8 @@ function Trek({ name, price, activities }) {
               <a
                 href={`/activities#${activity}`}
                 target={"__blank"}>
-                {activity}
                 <span>🔗</span>
+                {activity}
               </a>
             </li>
           ))}
