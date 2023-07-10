@@ -4,10 +4,15 @@ import InfoPage from "../components/infoPage";
 import useTreks from "../hooks/useTreks";
 import * as trekStyles from "../css/treks.module.css";
 
+const PAGE_TITLE = "Treks";
+
 function Trek({ name, price, activities }) {
   return (
     <div className={trekStyles.trek}>
-      <h5 className={trekStyles.trekName}>{name}<span className={trekStyles.trekPrice}>${price}</span></h5>
+      <h5 className={trekStyles.trekName}>
+        {name}
+        <span className={trekStyles.trekPrice}>${price}</span>
+      </h5>
       <div className={trekStyles.trekContent}>
         <p className={trekStyles.trekDescription}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam cum dolores earum facere, id illo minima nisi non porro quos tempora. A asperiores dignissimos labore molestiae quae rerum, tenetur.</p>
         <ul className={trekStyles.trekActivities}>
@@ -37,7 +42,7 @@ export default function Treks() {
   }, [inCamp])
 
   return (
-    <InfoPage title={"Treks"} description={"Carefully selected activities"}>
+    <InfoPage title={PAGE_TITLE} description={"Carefully selected activities"}>
       <h3>Treks</h3>
       <div className={trekStyles.siteSelection}>
         <button
@@ -66,5 +71,5 @@ export default function Treks() {
 }
 
 export const Head = () => (
-  <SEO title={"Treks"} />
+  <SEO title={PAGE_TITLE} />
 );
