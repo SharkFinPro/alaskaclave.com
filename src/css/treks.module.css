@@ -30,8 +30,10 @@ h3 {
 
 .treks {
   display: grid;
+  grid-template-columns: repeat(auto-fill, min(100%, 650px));
   grid-auto-rows: 1fr;
   gap: 1rem;
+  justify-content: center;
 }
 
 .treks * {
@@ -44,17 +46,16 @@ h3 {
   background: #dcdcdc;
   border: 5px solid #650812;
   border-radius: 0.5em;
-  max-width: 800px;
-  margin-inline: auto;
 }
 
 .trekName {
   font-family: MuseoSlab, sans-serif;
   font-size: 1.5rem;
-  padding-block: 1em;
+  padding-block: 0.5em;
   text-align: center;
   max-width: 500px;
   margin-inline: auto;
+  margin-bottom: 0.5rem;
 }
 
 .trekPrice {
@@ -64,7 +65,6 @@ h3 {
 
 .trekContent {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
@@ -77,7 +77,6 @@ h3 {
 .trekActivities {
   font-family: MuseoSans, serif;
   font-size: 1rem;
-  padding-left: 1em;
   display: grid;
   align-content: start;
   gap: 0.5em;
@@ -100,8 +99,8 @@ h3 {
   text-shadow: 0 0 0 #650812;
 }
 
-@media (max-width: 700px) {
+@media (min-width: 800px) {
   .trekContent {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
