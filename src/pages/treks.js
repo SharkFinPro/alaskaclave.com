@@ -35,11 +35,7 @@ export default function Treks() {
   const trekList = useTreks();
 
   useEffect(() => {
-    if (site === "camp") {
-      setTreks(trekList.filter(({ node }) => node.inCamp));
-    } else if (site === "fairbanks") {
-      setTreks(trekList.filter(({ node }) => !node.inCamp));
-    }
+    setTreks(trekList.filter(({ node }) => site === "camp" ? node.inCamp : !node.inCamp));
   }, [site])
 
   return (
