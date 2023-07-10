@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import SEO from "../components/seo";
 import InfoPage from "../components/infoPage";
-import * as trekStyles from "../css/treks.module.css";
 import useTreks from "../hooks/useTreks";
+import * as trekStyles from "../css/treks.module.css";
 
 function Trek({ name, price, activities }) {
   return (
@@ -30,7 +30,6 @@ function Trek({ name, price, activities }) {
 export default function Treks() {
   const [site, setSite] = useState("camp");
   const [treks, setTreks] = useState([]);
-
   const trekList = useTreks();
 
   useEffect(() => {
