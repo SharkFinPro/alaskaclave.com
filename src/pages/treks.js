@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import SEO from "../components/seo";
 import InfoPage from "../components/infoPage";
-import { StaticImage } from "gatsby-plugin-image";
 import * as trekStyles from "../css/treks.module.css";
 import useTreks from "../hooks/useTreks";
 
