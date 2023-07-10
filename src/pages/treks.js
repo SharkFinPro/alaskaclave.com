@@ -28,26 +28,26 @@ function Trek({ name, price, activities }) {
 }
 
 export default function Treks() {
-  const [site, setSite] = useState("camp");
+  const [inCamp, setInCamp] = useState(true);
   const [treks, setTreks] = useState([]);
   const trekList = useTreks();
 
   useEffect(() => {
-    setTreks(trekList.filter(({ node }) => site === "camp" ? node.inCamp : !node.inCamp));
-  }, [site])
+    setTreks(trekList.filter(({ node }) => inCamp ? node.inCamp : !node.inCamp));
+  }, [inCamp])
 
   return (
     <InfoPage title={"Treks"} description={"Carefully selected activities"}>
       <h3>Treks</h3>
       <div className={trekStyles.siteSelection}>
         <button
-          className={ site === "camp" ? trekStyles.selected : "" }
-          onClick={() => setSite("camp")}>
+          className={ inCamp ? trekStyles.selected : "" }
+          onClick={() => setInCamp(true)}>
           In Camp
         </button>
         <button
-          className={ site === "fairbanks" ? trekStyles.selected : "" }
-          onClick={() => setSite("fairbanks")}>
+          className={ !inCamp ? trekStyles.selected : "" }
+          onClick={() => setInCamp(false)}>
           In Fairbanks
         </button>
       </div>
