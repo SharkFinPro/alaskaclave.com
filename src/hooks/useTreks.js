@@ -9,7 +9,6 @@ const useTreks = () => {
             activities
             inCamp
             name
-            price
           }
         }
       }
