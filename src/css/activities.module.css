@@ -48,10 +48,11 @@
 }
 
 .activityTags {
-  margin-top: 0;
+  margin-top: 0.5em;
   margin-left: 1em;
   gap: 0.5em;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .activityTags p {
@@ -60,6 +61,7 @@
   padding: 0.3em 1em;
   border-radius: 1rem;
   opacity: 85%;
+  margin: 0;
 }
 
 .activityContent {
