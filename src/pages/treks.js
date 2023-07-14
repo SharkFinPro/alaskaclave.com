@@ -6,7 +6,7 @@ import * as trekStyles from "../css/treks.module.css";
 
 const PAGE_TITLE = "Treks";
 
-function Trek({ name, price, activities }) {
+function Trek({ name, activities }) {
   return (
     <div className={trekStyles.trek}>
       <h5 className={trekStyles.trekName}>{name}</h5>
