@@ -29,6 +29,7 @@
     "gatsby-source-filesystem": "^5.11.0",
     "gatsby-transformer-sharp": "^5.11.0",
     "mongodb": "^5.7.0",
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "saslprep": "^1.0.3"
   }
 }
