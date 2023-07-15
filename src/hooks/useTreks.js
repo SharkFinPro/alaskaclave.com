@@ -9,6 +9,9 @@ const useTreks = () => {
             activities
             inCamp
             name
+            description {
+              description
+            }
           }
         }
       }

@@ -6,12 +6,12 @@ import * as trekStyles from "../css/treks.module.css";
 
 const PAGE_TITLE = "Treks";
 
-function Trek({ name, activities }) {
+function Trek({ name, activities, description }) {
   return (
     <div className={trekStyles.trek}>
       <h5 className={trekStyles.trekName}>{name}</h5>
       <div className={trekStyles.trekContent}>
-        <p className={trekStyles.trekDescription}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam cum dolores earum facere, id illo minima nisi non porro quos tempora. A asperiores dignissimos labore molestiae quae rerum, tenetur.</p>
+        <p className={trekStyles.trekDescription}>{description}</p>
         <ul className={trekStyles.trekActivities}>
           {activities.map((activity) => (
             <li key={activity}>
@@ -59,6 +59,7 @@ export default function Treks() {
             name={node.name}
             price={node.price}
             activities={node.activities}
+            description={node.description?.description}
             key={node.name}
           />
         ))}
