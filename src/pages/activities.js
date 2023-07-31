@@ -18,7 +18,7 @@ function displayActivitySet(title, activities) {
       <h3 className={activitiesStyles.activitySetTitle}>{title}</h3>
       <div className={activitiesStyles.activitySet}>
         {activities.map((activity) => (
-          <div className={activitiesStyles.activity} key={activity.id}>
+          <div className={activitiesStyles.activity} id={activity.name} key={activity.id}>
             {
             activity.url ? <h5 className={activitiesStyles.activityName}>
                 <a target={"__blank"} href={activity.url} rel={"external"}>{activity.name} <span>🔗</span></a>

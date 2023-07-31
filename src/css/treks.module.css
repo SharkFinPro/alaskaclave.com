@@ -1,0 +1,104 @@
+h3 {
+  font-family: MuseoSlab, sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.siteSelection {
+  display: flex;
+  place-content: center;
+  gap: 1rem;
+  margin-block: 1rem;
+}
+
+.siteSelection > button {
+  font-family: MuseoSans, serif;
+  font-size: 1.3rem;
+  padding-block: 0.5em;
+  width: 40%;
+  max-width: 300px;
+  background: #650812;
+  color: #FFFFFF;
+  border: 4px solid #030006;
+  border-radius: 0.5em;
+  transition: 0.25s;
+}
+
+.siteSelection > button:hover, .siteSelection .selected {
+  background: #e31837;
+}
+
+.treks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, min(100%, 675px));
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.treks * {
+  margin: 0;
+  padding: 0;
+}
+
+.trek {
+  padding: 1rem;
+  background: #dcdcdc;
+  border: 5px solid #650812;
+  border-radius: 0.5em;
+}
+
+.trekName {
+  font-family: MuseoSlab, sans-serif;
+  font-size: 1.75rem;
+  padding-block: 0.5em;
+  text-align: center;
+  max-width: 500px;
+  margin-inline: auto;
+  margin-bottom: 0.5rem;
+}
+
+.trekContent {
+  display: grid;
+  gap: 1rem;
+  font-size: 1rem;
+  font-family: MuseoSans, serif;
+}
+
+.trekDescription {
+  padding-inline: 1em;
+}
+
+.trekActivities {
+  display: grid;
+  align-content: start;
+  gap: 0.5em;
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+.trekActivities > li > a {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  color: inherit;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.trekActivities > li > a:hover {
+  color: #650812;
+}
+
+.trekActivities > li > a > span {
+  font-size: 0.75em;
+  color: transparent;
+  text-shadow: 0 0 0 #650812;
+  padding-right: 1em;
+}
+
+@media (min-width: 800px) {
+  .trekContent {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+}
