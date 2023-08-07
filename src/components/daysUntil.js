@@ -5,7 +5,7 @@ export default function DaysUntil() {
   const todaysDate = new Date();
   const conclavesDate = new Date("08/11/2023");
   const timeDifference = conclavesDate.getTime() - todaysDate.getTime();
-  const daysBetween = Math.ceil(timeDifference / (1000 * 3600 * 24));
+  const daysBetween = Math.max(Math.ceil(timeDifference / (1000 * 3600 * 24)), 0);
 
   return (
     <section className={daysUntilStyles.container}>
