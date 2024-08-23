@@ -1,4 +1,14 @@
-# alaskaclave.com
+<p align="center">
+  <a href="https://alaskaclave.netlify.app">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://alaskaclave.netlify.app/static/97810635099417901a63c2ce619757c3/d689f/logoYellow_512.webp">
+      <img src="https://alaskaclave.netlify.app/static/97810635099417901a63c2ce619757c3/d689f/logoYellow_512.webp" height="128">
+    </picture>
+    <h1 align="center">alaskaclave.com</h1>
+  </a>
+</p>
+
+## Getting Started
 Welcome to the repository for the 2023 Order of the Arrow Section G15 Conclave, an exciting event hosted at Lost Lake Scout Camp in Fairbanks, Alaska.
 This project showcases the official website that provides essential information, resources, and updates for the conclave, focusing on training, fellowship, and a variety of activities.
 
