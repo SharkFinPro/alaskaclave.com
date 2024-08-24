@@ -20,9 +20,9 @@ This project showcases the official website that provides essential information,
 
 ## Technology Stack
 This website is built using modern web technologies to ensure a responsive and user-friendly experience:
-- Frontent: React
-- Backend: Node.js, Gatsby
-- Deployment: Netlify (Formerly, Gatsby Cloud)
+- **Frontent**: React
+- **Backend**: Node.js, Gatsby, MongoDB, Contentful
+- **Deployment**: Netlify, MongoDB
 
 ## Installation and Setup
 To run this project locally, follow these steps:
