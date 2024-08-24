@@ -19,7 +19,7 @@ This project showcases the official website that provides essential information,
 - Registration and Preparation: Resources to help attendees register and prepare for the conclave.
 
 ## Technology Stack
-This website is built using modern web technologies to ensure a responsive and user-friendly experience:
+This website is built using modern web technologies to ensure a responsive and user-friendly experience across various devices:
 - **Frontent**: React
 - **Backend**: Node.js, Gatsby, MongoDB, Contentful
 - **Deployment**: Netlify, MongoDB
