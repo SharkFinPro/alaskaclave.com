@@ -46,6 +46,7 @@ npm start
 ```
 
 4. Visit the website:
+
 Open your browser and go to http://localhost/
 
 ## License
